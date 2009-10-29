@@ -1,0 +1,35 @@
+﻿산밤밤반뚜
+우어어어떠
+우으으으으으으으으으으으으아삭뿌으으아우
+삭바아삭밯아산빠삭빠싼산자초으싼산파초우
+으으으오으으으으으으으으으아아아아아우숟
+으으으오어어어어어어어어어어어어어어어부
+우어어어어어어어어어어어어어어어어어어어
+우으아우으하
+삭빠추삳빠추
+으오썯으오멓
+
+print all elements of the stack (ㄷ)
+우으아done
+삳빠추
+으오멓
+
+move all data (o terminated) from stack (ㄱ) to stack (ㄷ)
+우으아done
+삭빠추
+으오썯
+enter is 10
+
+move 10 to a store (ㄴ)
+산밙밙다
+check if value in (ㄱ) is 10
+우으으으으으으아삭뿌    is 10
+산빠삭빠싼산자초으싼산파초
+으으으으으으으아아아아아우not 10
+
+insert user input into store (ㄱ)
+삭밯
+
+fill 0 into store (ㄱ)
+삭바
+

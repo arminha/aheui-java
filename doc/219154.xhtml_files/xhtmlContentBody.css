@@ -1,0 +1,244 @@
+body.xhtmlEditorBody {
+	clear: both;
+	margin: 0;
+	padding: 0 23px 0 22px;
+	line-height: 2em;
+	font-size: 0.75em;
+}
+body.ko {
+	font-family: "굴림", Gulim, "돋움", Dotum, Arial, sans-serif;
+}
+body.en {
+	font-family: arial;
+}
+body.en h1,
+body.en h2,
+body.en h3,
+body.en h4,
+body.en h5,
+body.en h6 {
+	font-family: arial, sans-serif;
+}
+.xhtmlEditorBody * {
+	line-height: 2em;
+}
+.xhtmlEditorBody img {
+	max-width: 100%;
+	border: 0 none;
+}
+.xhtmlEditorBody a,
+.xhtmlEditorBody a:visited,
+.xhtmlEditorBody a:hover {
+	color: #568942 !important;
+	text-decoration: underline;
+	cursor: pointer !important;
+}
+.xhtmlEditorBody a.wiki,
+.xhtmlEditorBody a.wiki:visited,
+.xhtmlEditorBody a.wiki:hover {
+	color: #002BB8 !important;
+	text-decoration: underline;
+	cursor: pointer !important;
+}
+.xhtmlEditorBody p {
+	margin: 0;
+}
+.xhtmlEditorBody em.italic {
+	font-style: italic !important;
+}
+.xhtmlEditorBody em.italic * {
+	font-style: italic !important;
+}
+.xhtmlEditorBody em.underline {
+	font-style: normal;
+	text-decoration: underline;
+}
+.xhtmlEditorBody span.strike{
+	text-decoration: line-through;
+}
+body.xhtmlEditorBody span.super,
+body.xhtmlEditorBody span.sub {
+	position: relative;
+	font-size: 0.6em;
+}
+div.xhtmlEditorBody span.super,
+div.xhtmlEditorBody span.sub {
+	position: relative;
+	font-size: 0.9em;
+}
+body.xhtmlEditorBody span.super,
+div.xhtmlEditorBody span.super {
+	top: -0.4em;	
+}
+body.xhtmlEditorBody span.sub,
+div.xhtmlEditorBody span.sub {
+	bottom: -0.4em;
+}
+
+
+/* 윗첨자 */
+.xhtmlEditorBody sup {
+	font-size: 0.916em;
+	position: relative;
+	top: 0.1em;
+	line-height: 0.8em;
+}
+/* 아랫첨자 */
+.xhtmlEditorBody sub {
+	font-size: 0.916em;
+	position: relative;
+	bottom: -0.3em;
+	line-height: 0.8em;
+}
+/* 구분선 */
+.xhtmlEditorBody hr {
+	margin: 0 0 1.835em 0;
+	bottom: -0.9em;
+	position: relative;
+	background: none;
+	border: none;
+	border-top: 1px solid #000;
+}
+
+/* 단락제목 공통 */
+.xhtmlEditorBody h1,
+.xhtmlEditorBody h2,
+.xhtmlEditorBody h3,
+.xhtmlEditorBody h4,
+.xhtmlEditorBody h5,
+.xhtmlEditorBody h6 {
+	margin: 0;
+	color: #223d67;
+	font-family: malgun gothic, dotum, gulim, sans-serif;
+}
+/* 단락제목1 */
+.xhtmlEditorBody h1 {
+	font-size: 2em;
+	background: url(http://static.springnote.com/images/bg/heading1.gif) repeat-x 0 100%;
+}
+/* 단락제목2 */
+.xhtmlEditorBody h2 {
+	font-size: 1.833em;
+	line-height: 2.181em;
+	background: url(http://static.springnote.com/images/bg/heading2.gif) repeat-x 0 100%;
+}
+/* 단락제목3 */
+.xhtmlEditorBody h3 {
+	font-size: 1.5em;
+	line-height: 2.666em;
+	background: url(http://static.springnote.com/images/bg/heading3.gif) repeat-x 0 100%;
+}
+/* 단락제목4 */
+.xhtmlEditorBody h4 {
+	font-size: 1.333em;
+	line-height: 3em;
+	background: url(http://static.springnote.com/images/bg/heading4.gif) repeat-x 0 100%;
+}
+/* 단락제목5 */
+.xhtmlEditorBody h5 {
+	font-size: 1.166em;
+	line-height: 3.428em;
+	background: url(http://static.springnote.com/images/bg/heading5.gif) repeat-x 0 100%;
+}
+/* 단락제목6 */
+.xhtmlEditorBody h6 {
+	font-size: 1em;
+	background: url(http://static.springnote.com/images/bg/heading6.gif) repeat-x 0 100%;
+}
+
+/* 리스트 공통 */
+.xhtmlEditorBody ul,
+.xhtmlEditorBody ol {
+	margin: 0;
+	padding: 0 0 0 24px;
+	/padding-left: 28px;
+}
+/* 아이콘 리스트 */
+.xhtmlEditorBody ul.list-type-1 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style01_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style01.gif); }
+.xhtmlEditorBody ul.list-type-2 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style02_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style02.gif); }
+.xhtmlEditorBody ul.list-type-3 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style03_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style03.gif); }
+.xhtmlEditorBody ul.list-type-4 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style04_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style04.gif); }
+.xhtmlEditorBody ul.list-type-5 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style05_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style05.gif); }
+
+.xhtmlEditorBody ul.arrowListType { list-style-image: url(http://static.springnote.com/images/template/ic_arrow01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_arrow01.gif); }
+.xhtmlEditorBody ul.bookListType { list-style-image: url(http://static.springnote.com/images/template/ic_book01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_book01.gif); }
+.xhtmlEditorBody ul.checkListType { list-style-image: url(http://static.springnote.com/images/template/ic_check01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_check01.gif); }
+.xhtmlEditorBody ul.panListType { list-style-image: url(http://static.springnote.com/images/template/ic_pan01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_pan01.gif); }
+.xhtmlEditorBody ul.pageListType { list-style-image: url(http://static.springnote.com/images/template/ic_page01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_page01.gif); }
+.xhtmlEditorBody ul.memberListType { list-style-image:url(http://static.springnote.com/images/template/ic_member01_ff.gif);/list-style-image:url(http://static.springnote.com/images/template/ic_member01.gif); }
+.xhtmlEditorBody ul.noticeListType { list-style-image: url(http://static.springnote.com/images/template/ic_notice01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_notice01.gif); }
+.xhtmlEditorBody ul.websiteListType { list-style-image: url(http://static.springnote.com/images/template/ic_website01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_website01.gif); }
+.xhtmlEditorBody ul.groupType { list-style-image: url(http://static.springnote.com/images/template/ic_group_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_group.gif); }
+
+
+/* 코드 */
+.xhtmlEditorBody ol.code {
+	padding-left: 38px;
+	background: #EFEFEF url(http://static.springnote.com/images/icon/contextCodeBg.gif) no-repeat 8px 7px;
+	font-family: Monaco,GulimChe,"Courier new",monospace;
+}
+.xhtmlEditorBody ol.code li {
+	list-style-type: none;
+}
+
+/* 인용 단락 */
+.xhtmlEditorBody blockquote {
+	margin: 0;
+	padding: 0 0 0 38px;
+	background: #EFEFEF url(http://static.springnote.com/images/icon/contextBlockquoteBg.gif) no-repeat 14px 4px;
+}
+/* 이모티콘 */
+.xhtmlEditorBody img.emoticon {
+	vertical-align: middle;
+}
+.xhtmlEditorBody h1 img.emoticon,
+.xhtmlEditorBody h2 img.emoticon,
+.xhtmlEditorBody h3 img.emoticon,
+.xhtmlEditorBody h4 img.emoticon,
+.xhtmlEditorBody h5 img.emoticon {
+	/margin: 12px 0;	
+}
+.xhtmlEditorBody h6 img.emoticon {
+	vertical-align: top;
+	/vertical-align: middle;
+}
+/* 섹션 */
+.xhtmlEditorBody div {
+	padding: 0 0 0 12px;
+	background-color: #F9F9D8;
+}
+
+/* 테이블 */
+.xhtmlEditorBody table {
+	width: 96%;
+	margin: 1px 0;
+	border-collapse: collapse;
+	font-size: 1em;
+	background-color: #FFFFFF;
+}
+.xhtmlEditorBody table caption {
+	text-align: left;
+}
+.xhtmlEditorBody table th,
+.xhtmlEditorBody table td {
+	margin: 0;
+	padding: 0 3px;
+	border: 1px solid #999;
+}
+.xhtmlEditorBody table th {
+	font-weight: normal;
+	background-color: #e7e7e7;
+}
+.xhtmlEditorBody table td {
+	overflow: hidden;
+}
+/* 지도 */
+div.geo {
+	background-color: transparent;
+	width: 561px;
+	height: 394px;
+}
+div.geo .latitude,
+div.geo .longitude {
+	display: none;
+}

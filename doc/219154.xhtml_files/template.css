@@ -1,0 +1,552 @@
+/*---------------------------------------------------------------
+template
+---------------------------------------------------------------*/
+div.xqtemplate {
+	background:white;
+}
+div.xqtemplate div {
+	background:white;
+}
+div.xqtemplate h1 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading1.gif);	
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+div.xqtemplate h2 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading2.gif);
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;	
+}
+div.xqtemplate h3 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading3.gif);
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+div.xqtemplate h4 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading4.gif);
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+div.xqtemplate h5 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading5.gif);
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+div.xqtemplate h6 {
+	color:#9c0;
+	background-image: url(http://static.springnote.com/images/template/heading5.gif);
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+div.xqtemplate ul{
+	list-style-image: url(http://static.springnote.com/images/template/ic_bullet.gif);
+}
+div.xqtemplate li p{
+	display: inline;
+}
+div.xqtemplate ul.balloon{
+	list-style-image: url(http://static.springnote.com/images/template/ic_balloon.gif);
+}
+div.xqtemplate ul.pencil{
+	list-style-image: url(http://static.springnote.com/images/template/ic_pencil.gif);
+}
+div.xqtemplate ul.notice{
+	list-style-image: url(http://static.springnote.com/images/template/ic_notice.gif);
+}
+div.xqtemplate ul.notice ul{
+	list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif);
+}
+div.xqtemplate ul.check{
+	list-style-image: url(http://static.springnote.com/images/template/ic_check.gif);
+}
+div.xqtemplate ul.subject{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_pencil.gif); 
+}
+div.xqtemplate ul.member{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_member.gif); 
+}
+div.xqtemplate ul.website{
+	list-style-image: url(http://static.springnote.com/images/template/ic_website.gif);
+}
+div.xqtemplate ul.book{
+	list-style-image: url(http://static.springnote.com/images/template/ic_book.gif);
+}
+div.xqtemplate ul.pan{
+	list-style-image: url(http://static.springnote.com/images/template/ic_pan.gif);
+}
+div.xqtemplate ul.thread_root {
+	list-style-image: url(http://static.springnote.com/images/template/ic_talk.gif);
+}
+div.xqtemplate ul.thread_root ul {
+	list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif);
+}
+
+div.bookshelf ul{ 
+	list-style-image: url(http://static.springnote.com/images/template/ic_book.gif)
+}
+div.bookshelf ul ul{ 
+	list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif)
+}
+div.scrap ul{ 
+	list-style-image: url(http://static.springnote.com/images/template/ic_website.gif)
+}
+div.scrap ul ul{ 
+	list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif)
+}
+div.recipe img.icon{ 
+    float:none;
+    margin:0 5px;
+    vertical-align:middle; 
+}
+table.recipe td ul{ 
+	list-style-image:url(http://static.springnote.com/images/template/ic_bullet.gif);
+}
+div.report h1{ 
+    text-align:center;
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading1.gif);
+}
+div.report h2{ 
+    text-align:center;
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading2.gif);
+}
+div.report h3{ 
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading3.gif);
+}
+div.report h4{ 
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading4.gif);
+}
+div.report h5{ 
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading5.gif);
+}
+div.report h6{ 
+	color:#223D67; 
+	background-image: url(http://static.springnote.com/images/bg/heading6.gif);
+}
+div.report div.cover{
+    text-align:right;
+}
+div.xqtemplate table {
+	border-collapse:collapse;
+    width:98%;
+    margin:10px 0px 10px 0px;
+	font-size:1em; 
+}
+div.xqtemplate table th{ 
+    margin:0;
+    border:solid 1px silver;
+    background:white;
+	color:#99CC00;
+	padding:0.3em;
+	line-height:2em; 
+}
+div.xqtemplate table td{ 
+    margin:0;
+    border:solid 1px #cfcfcf;
+    background:white;
+    text-align:center; 
+    line-height:2em;
+}
+div.xqtemplate table.appointment {
+   	table-layout:fixed;
+}
+div.xqtemplate table.weekly {
+   	table-layout:fixed;
+}
+div.xqtemplate table.weekly td{
+    text-align:left;
+    vertical-align:top;
+}
+div.xqtemplate table.diet td.weight{ 
+	color:black;
+}
+div.xqtemplate table.diet td.menu{ 
+    text-align:left;
+}
+
+div.xqtemplate table.timetable{ 
+   	table-layout:fixed;
+}
+div.xqtemplate table.timetable td.time{ 
+    font-weight:bold;
+    color:gray;
+}
+div.xqtemplate table.timetable td{ 
+    width:12%; 
+}
+div.xqtemplate table.layout {
+	border:4px solid #b5e2db;
+    overflow:hidden;
+   	table-layout:fixed;
+}
+div.xqtemplate table.layout td.left{
+	text-align:left;
+    width:150px;
+    padding:1em 1em 1em 1em;
+    margin-right:0.3em;
+    border:none;
+    vertical-align:top;
+}
+div.xqtemplate table.layout td.center{
+	text-align:left;
+    background:white url(http://static.springnote.com/images/template/bg_spring.gif) repeat-y scroll right; 
+    border:none;
+    padding:1em 1em 1em 1em;
+    vertical-align:top;
+    width:34%;
+}
+div.xqtemplate table.layout td.right{
+	text-align:left;
+    padding:1em 1em 1em 1em;
+    border:none;
+    vertical-align:top;
+}
+div.xqtemplate table.layout td p.dashTitle{ 
+    color:#9c0;
+    font-size: 1.75em;
+    font-family:tahoma;
+}
+div.xqtemplate table.layout td.right ul{ 
+    list-style-position:inside;
+}
+div.dashboard table.layout td.right ul{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_page.gif); 
+}
+div.meeting table.layout td.left { 
+	width:50%;
+}
+div.meeting table.layout td.right { 
+	width:410px;
+}
+div.profile table.layout h4 img{ 
+    vertical-align:center; 
+}
+div.profile table.layout td.right p.n{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#9c0; 
+}
+div.profile table.layout td.left p.n{ 
+	width:130px;
+}
+div.recipe table.layout td.left{ 
+    width:410px;
+}
+div.knowledge-dashboard table td{
+	text-align:left;
+}
+
+
+/*---------------------------------------------------------------
+New template > 20080318
+---------------------------------------------------------------*/
+
+table.xqtTable {	
+    border-collapse:collapse;
+    width:98%;
+    margin:10px 0px 10px 0px;
+	font-size:1em;
+    border: 1px solid #c0c0c0;
+}
+table.xqtTable img {
+	max-width: none !important;
+}
+table.xqtTable th{ 
+    margin:0;
+    border: 1px solid #c0c0c0;
+    background:white;
+	color:#99CC00;
+	padding:0.3em;
+	line-height:2em; 
+}
+table.xqtTable td{ 
+    margin:0;
+    border:solid 1px #cfcfcf;
+    background:white;
+    line-height:2em;
+    vertical-align: top;
+	padding:0.3em;
+}
+table.blackBoard {
+	border:4px solid #b5e2db;
+    overflow:hidden;
+   	table-layout:fixed;
+}
+table.blackBoard td.leftBoard{
+	text-align:left;
+    width:150px;
+    padding:1em 1em 1em 1em;
+    margin-right:0.3em;
+    border:none;
+    vertical-align:top;
+}
+table.blackBoard td.centerBoard{
+	text-align:left;
+    background:white url(http://static.springnote.com/images/template/bg_spring.gif) repeat-y scroll right; 
+    border:none;
+    padding:1em 1em 1em 1em;
+    vertical-align:top;
+    width:40%;
+}
+table.blackBoard td.rightBoard{
+	text-align:left;
+    padding:1em 1em 1em 1em;
+    border:none;
+    vertical-align:top;
+}
+table.blackBoard td p.dashTitle{ 
+    color:#9c0;
+    font-size:1.75em;
+    font-family:tahoma;
+}
+table.blackBoard td.rightBoard ul{ 
+    list-style-position:inside;
+}
+h1.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading1.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+h2.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading2.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+h3.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading3.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+h3.xqtHeading2 {
+	margin: 0;
+	color:#333;
+	background: url(http://static.springnote.com/images/template/heading4_1.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+	font-family: malgun gothic, sans-serif;
+	font-size: 1.5em;
+}
+h4.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading4.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+h5.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading5.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+h6.xqtHeading {
+	margin: 0;
+	color:#9c0;
+	background: url(http://static.springnote.com/images/template/heading5.gif) no-repeat 0 100%;
+	_padding-bottom: 10px;
+	_margin-bottom: 5px;
+}
+span.year{ 
+    font-size:3.583em;
+    font-family:verdana;
+    font-weight:bold;
+    color:#99CC00;
+	letter-spacing: -1px;
+}
+.theme{ 
+    font-size:2.166em;
+    font-family:malgun gothic;
+    font-weight:bold;
+    color:#99cc00; 
+}
+span.separate { 
+    font-size:3.583em;
+    font-family:gulim;
+    color:#dcdcdc;
+}
+span.month{ 
+    font-size:3.583em;
+    font-family:verdana;
+    font-weight:bold;
+    color:#787878; 
+	letter-spacing: -1px;
+}
+span.term{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#787878; 
+}
+span.date{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#787878; 
+}
+span.description{ 
+    font-size:1.25em;
+    font-family:verdana;
+    color:#999; 
+}
+span.sunday {
+	color:#ff9933;
+}
+span.saturday {
+	color:#66ccff;
+}
+table.calendar p.date{ 
+    text-align:left;
+    margin:0.5em 0.5em; 
+}
+table.calendar td.vevent{ 
+     width:14%;
+}
+table.calendar abbr.dtstart{ 
+    text-decoration:none;
+    color:#111111;
+}
+table.calendar2 {
+	border: none;
+	table-layout: fixed;
+}
+table.calendar2 th {
+	text-align: left;
+	font-weight: bold;
+	color: #fff;
+	background-color: #99cc00;
+	font-family: arial, sans-serif;
+	font-size: 0.916em;
+	border: 1px solid #fff;
+	border-top-color: #99cc00;
+	border-bottom: none;
+	padding-top: 1px;
+	padding-bottom: 2px;
+}
+table.calendar2 th,
+table.calendar2 td {
+	width: 14%;
+} 
+table.calendar2 th.sun {
+	background-color: #ff9933;	
+	border-left-color: #ff9933;	
+	border-top-color: #ff9933;
+}
+table.calendar2 th.sat {
+	background-color: #66ccff;
+	border-right-color: #66ccff;
+	border-top-color: #66ccff;
+}
+table.calendar2 tr.date td {
+	border-bottom: none;
+	background-color: #f6f6f6;
+}
+table.calendar2 tr.date td a {
+	font-weight: bold;
+	color: #666 !important;
+	font-family: arial, sans-serif;
+	text-decoration: none !important;
+}
+table.calendar2 tr.date td.sun,
+table.calendar2 tr.date td.sat {
+	border-bottom: none;
+	background-color: #efefef;
+}
+table.calendar2 tr.date td.sun a {
+	color: #f1771d !important;
+}
+table.calendar2 tr.date td.sat a {
+	color: #2a99d0 !important;
+}
+table.calendar2 tr.summary td {
+	border-top: none;
+	background-color: #fff;	
+} 
+table.calendar2 tr.summary td.sun,
+table.calendar2 tr.summary td.sat {
+	background-color: #f7f7f7;
+}
+table.business {
+	border: none;
+}
+table.business th {
+	font-family: dotum;
+	font-size: 1.166em;
+	font-weight: bold;
+	background-color: #99cc00;
+	color: #fff;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	border: 1px solid #99cc00;
+	border-right: 1px solid #fff;
+	border-top: none;
+}
+table.business tr.project td {
+	background-color: #f6f6f6;
+	color: #666;
+	font-weight: bold;
+}
+div.usage { 
+    clear:both;
+    color:#339;
+    padding:0.3em;
+    border:1px solid #c90;
+    background:#ff9 !important; 
+}
+div.title {
+	background:white;
+	text-align:left;
+	margin:1.5em 0em 0em;
+	/line-height:3em;
+	/padding-bottom:1em;
+}
+div.goal {
+	background:white;
+	text-align:left;
+	margin:1.5em 0em 0em;
+    float:right; 
+	/line-height:3em;
+	/padding-bottom:1em;
+}
+
+div.goal span{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#4B2DFF; 
+}
+
+table.monthlyplan td{ 
+    width:46%; 
+}
+table.monthlyplan tbody th{ 
+    width:4%;
+}
+table.fixed {
+   	table-layout:fixed;
+}
+table.meeting td.leftBoard { 
+	width:50%;
+}
+table.meeting td.rightBoard { 
+	width:410px;
+}
+table.recipe td.leftBoard { 
+    width:410px;
+}
