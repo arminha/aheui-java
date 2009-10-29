@@ -1,8 +1,10 @@
-/**
- * 
- */
 package com.aha.hangul;
 
+/**
+ * Represents the initial Jamo in a Hangul syllable
+ * @author Armin Häberling (armin.aha@gmail.com)
+ * @see HangulSyllable
+ */
 public enum InitialJamo implements Jamo {
     /** ㄱ */
     Giyeok('ㄱ'),
@@ -43,10 +45,16 @@ public enum InitialJamo implements Jamo {
     /** ㅎ */
     Hieut('ㅎ');
     
+    private char character;
+
     private InitialJamo(char character) {
         this.character = character;
     }
-    private char character;
+
+    /**
+     * Returns the char value of this Jamo
+     * @return a char representation of the Jamo
+     */
     @Override
     public char character() {
         return character;

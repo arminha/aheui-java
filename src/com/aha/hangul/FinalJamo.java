@@ -1,8 +1,10 @@
-/**
- * 
- */
 package com.aha.hangul;
 
+/**
+ * Represents the final Jamo in a Hangul syllable
+ * @author Armin Häberling (armin.aha@gmail.com)
+ * @see HangulSyllable
+ */
 public enum FinalJamo implements Jamo {
     /** No final Jamo */
     None,
@@ -61,13 +63,20 @@ public enum FinalJamo implements Jamo {
     /** ㅎ */
     Hieut('ㅎ');
     
+    private char character;
+
     private FinalJamo() {
         this.character = '\0';
     }
+
     private FinalJamo(char character) {
         this.character = character;
     }
-    private char character;
+
+    /**
+     * Returns the char value of this Jamo
+     * @return a char representation of the Jamo
+     */
     @Override
     public char character() {
         return character;
