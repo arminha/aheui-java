@@ -12,7 +12,7 @@ import java.util.Deque;
 import java.util.List;
 
 import com.aha.aheui.ast.CodeBlock;
-import com.aha.aheui.ast.CodeBlocks;
+import com.aha.aheui.ast.Program;
 import com.aha.aheui.ast.Instruction;
 import com.aha.aheui.ast.Storage;
 import com.aha.aheui.visitor.AbstractVisitor;
@@ -43,7 +43,7 @@ public class AheuiInterpreter {
         }
     }
     
-    public void run(CodeBlocks codeBlocks) {
+    public void run(Program codeBlocks) {
         init();
         
         Executer executer = new Executer();

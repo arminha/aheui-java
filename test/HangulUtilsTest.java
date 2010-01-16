@@ -1,8 +1,8 @@
 import java.io.PrintStream;
 
 import com.aha.aheui.ast.CodeBlock;
-import com.aha.aheui.ast.CodeBlocks;
 import com.aha.aheui.ast.Instruction;
+import com.aha.aheui.ast.Program;
 import com.aha.aheui.interpreter.AheuiInterpreter;
 import com.aha.aheui.parser.AheuiParser;
 import com.aha.hangul.FinalJamo;
@@ -28,11 +28,11 @@ public class HangulUtilsTest {
     
     public static void testHello() throws Exception {
         AheuiParser parser = new AheuiParser();
-        Tuple<Matrix<Instruction>, CodeBlocks> result = parser.parse(fibbonacciExample);
+        Tuple<Matrix<Instruction>, Program> result = parser.parse(fibbonacciExample);
         
-        CodeBlocks codeBlocks = result.getSecond();
+        Program program = result.getSecond();
         AheuiInterpreter interpreter = new AheuiInterpreter();
-        interpreter.run(codeBlocks);
+        interpreter.run(program);
     }
     
     public static void testParser() throws Exception {
@@ -50,7 +50,7 @@ public class HangulUtilsTest {
         out.println(HangulSyllable.isHangulSyllable(po.character()));
 
         AheuiParser parser = new AheuiParser();
-        Tuple<Matrix<Instruction>, CodeBlocks> result = parser.parse(fibbonacciExample);
+        Tuple<Matrix<Instruction>, Program> result = parser.parse(fibbonacciExample);
         Matrix<Instruction> instructions = result.getFirst();
         for (int j = 0; j < instructions.getRows(); j++) {
             out.println("Line " + j + ":");
@@ -61,10 +61,10 @@ public class HangulUtilsTest {
         
         out.println();
         
-        CodeBlocks codeBlocks = result.getSecond();
+        Program program = result.getSecond();
         
-        out.println("Number of code blocks: " + codeBlocks.getCodeBlocks().size());
-        for (CodeBlock codeBlock : codeBlocks.getCodeBlocks()) {
+        out.println("Number of code blocks: " + program.getCodeBlocks().size());
+        for (CodeBlock codeBlock : program.getCodeBlocks()) {
             out.println("Block " + codeBlock.getUniqueName());
             for (Instruction instruction : codeBlock.getInstructions()) {
                 out.println("    " + instruction.toString());

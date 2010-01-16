@@ -1,7 +1,7 @@
 package com.aha.aheui.parser;
 
 import com.aha.aheui.ast.CodeBlock;
-import com.aha.aheui.ast.CodeBlocks;
+import com.aha.aheui.ast.Program;
 import com.aha.aheui.ast.Instruction;
 import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.util.Matrix;
@@ -15,14 +15,14 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
     
     // fields of the visitor
     private Matrix<Instruction> instructions;
-    private CodeBlocks codeBlocks;
+    private Program program;
     private Instruction previousInstruction;
     
-    public CodeBlocks createCodeBlocks(Matrix<Instruction> instructions) {
-        codeBlocks = new CodeBlocks();
+    public Program createProgram(Matrix<Instruction> instructions) {
+        program = new Program();
         this.instructions = instructions;
-        codeBlocks.setStartBlock(visit(instructions.get(0, 0)));
-        return codeBlocks;
+        program.setStartBlock(visit(instructions.get(0, 0)));
+        return program;
     }
     
     @Override
@@ -39,7 +39,7 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
         } else {
             codeBlock = new CodeBlock(instruction);
         }
-        codeBlocks.add(codeBlock);
+        program.add(codeBlock);
         
         // visit next instruction
         Instruction nextInstruction = getNextInstruction(instruction, false);
@@ -63,7 +63,7 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
         } else {
             codeBlock = new CodeBlock(instruction);
         }
-        codeBlocks.add(codeBlock);
+        program.add(codeBlock);
         
         // visit next instruction
         Instruction nextInstruction = getNextInstruction(instruction, false);
@@ -85,7 +85,7 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
         CodeBlock codeBlock = getCodeBlockForInstruction(instruction);
         if (codeBlock == null) {
             codeBlock = new CodeBlock(instruction);
-            codeBlocks.add(codeBlock);
+            program.add(codeBlock);
         }
         return codeBlock;
     }
@@ -95,7 +95,7 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
         CodeBlock codeBlock = getCodeBlockForInstruction(instruction);
         if (codeBlock == null) {
             codeBlock = new CodeBlock(instruction);
-            codeBlocks.add(codeBlock);
+            program.add(codeBlock);
         }
         return codeBlock;
     }
@@ -147,9 +147,9 @@ class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
     
     private CodeBlock getCodeBlockForInstruction(Instruction instruction) {
         if (isPreviousNeeded(instruction)) {
-            return codeBlocks.get(instruction, previousInstruction);
+            return program.get(instruction, previousInstruction);
         }
-        return codeBlocks.get(instruction);
+        return program.get(instruction);
     }
 
     private boolean isPreviousNeeded(Instruction instruction) {

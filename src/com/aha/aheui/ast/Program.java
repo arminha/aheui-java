@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-public class CodeBlocks {
+public class Program {
 
     private final Map<String, CodeBlock> codeBlocks = new HashMap<String, CodeBlock>();
     private final Map<String, List<CodeBlock>> inverseReferences = new HashMap<String, List<CodeBlock>>();
