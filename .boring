@@ -48,3 +48,5 @@
 \.(obj|a|exe|so|lo|la)$
 ^\.darcs-temp-mail$
 ^\bin/
+^\dist
+^\build
