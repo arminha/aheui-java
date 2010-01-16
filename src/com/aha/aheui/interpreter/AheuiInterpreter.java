@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
-import com.aha.NotImplementedException;
 import com.aha.aheui.ast.CodeBlock;
 import com.aha.aheui.ast.CodeBlocks;
 import com.aha.aheui.ast.Instruction;
 import com.aha.aheui.ast.Storage;
 import com.aha.aheui.visitor.AbstractVisitor;
+import com.aha.util.NotImplementedException;
 
 public class AheuiInterpreter {
 

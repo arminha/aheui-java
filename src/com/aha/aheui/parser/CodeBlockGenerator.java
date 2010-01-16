@@ -1,11 +1,11 @@
 package com.aha.aheui.parser;
 
-import com.aha.NotImplementedException;
 import com.aha.aheui.ast.CodeBlock;
 import com.aha.aheui.ast.CodeBlocks;
 import com.aha.aheui.ast.Instruction;
 import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.util.Matrix;
+import com.aha.util.NotImplementedException;
 
 // TODO encapsulate the visitor into an inner class
 public class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {

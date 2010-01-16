@@ -1,7 +1,7 @@
 package com.aha.aheui.visitor;
 
-import com.aha.NotImplementedException;
 import com.aha.aheui.ast.Instruction;
+import com.aha.util.NotImplementedException;
 
 public abstract class AbstractVisitor<T> implements Visitor<T> {
 

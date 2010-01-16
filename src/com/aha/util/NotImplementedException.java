@@ -1,4 +1,4 @@
-package com.aha;
+package com.aha.util;
 
 public class NotImplementedException extends RuntimeException {
 
