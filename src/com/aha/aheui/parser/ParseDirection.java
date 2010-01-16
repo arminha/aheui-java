@@ -4,7 +4,7 @@ import com.aha.aheui.ast.DirectionModifier;
 import com.aha.aheui.ast.Instruction;
 import com.aha.util.Method;
 
-public class ParseDirection implements Method<Instruction> {
+class ParseDirection implements Method<Instruction> {
 
     private ErrorLevel invalidDirection = ErrorLevel.Ignore;
     

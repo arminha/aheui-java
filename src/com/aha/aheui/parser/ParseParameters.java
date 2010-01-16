@@ -7,7 +7,7 @@ import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.hangul.FinalJamo;
 import com.aha.util.Method;
 
-public class ParseParameters extends AbstractVisitor<Instruction> implements
+class ParseParameters extends AbstractVisitor<Instruction> implements
         Method<Instruction> {
 
     private ErrorLevel invalidParameters = ErrorLevel.Ignore;

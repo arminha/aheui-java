@@ -8,7 +8,7 @@ import com.aha.util.Matrix;
 import com.aha.util.NotImplementedException;
 
 // TODO encapsulate the visitor into an inner class
-public class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
+class CodeBlockGenerator extends AbstractVisitor<CodeBlock> {
 
     private ErrorLevel reachableInvalidInstruction = ErrorLevel.Error;
     private ErrorLevel reachableUndefinedInstruction = ErrorLevel.Error;

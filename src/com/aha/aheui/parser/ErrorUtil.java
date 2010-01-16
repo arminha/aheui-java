@@ -2,7 +2,7 @@ package com.aha.aheui.parser;
 
 import com.aha.aheui.ast.Instruction;
 
-public class ErrorUtil {
+class ErrorUtil {
 
     public static void error(int line, int column, ErrorLevel errorLevel, String message) {
         switch (errorLevel) {

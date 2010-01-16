@@ -9,7 +9,7 @@ import com.aha.aheui.ast.Operation;
 import com.aha.hangul.HangulSyllable;
 import com.aha.util.Matrix;
 
-public class Lexer {
+class Lexer {
 
     public Matrix<Instruction> getInstructions(String program) {
         BufferedReader reader = new BufferedReader(new StringReader(program));
