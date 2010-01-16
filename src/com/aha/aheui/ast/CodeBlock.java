@@ -50,7 +50,7 @@ public class CodeBlock {
         return Collections.unmodifiableList(instructions);
     }
 
-    public void mergeWithNext() {
+    void mergeWithNext() {
         if (next == null || alternativeNext != null) {
             throw new IllegalStateException();
         }
@@ -59,7 +59,7 @@ public class CodeBlock {
         next = next.getNext();
     }
 
-    public String getName() {
+    public String getUniqueName() {
         Instruction first = instructions.get(0);
         return getNameInternal(first, previousDirectionModifier);
     }
@@ -119,11 +119,7 @@ public class CodeBlock {
         return sb.toString();
     }
     
-    public static String getName(Instruction instruction) {
-        return getName(instruction, null);
-    }
-    
-    public static String getName(Instruction instruction, Instruction previousInstruction) {
+    static String getUniqueName(Instruction instruction, Instruction previousInstruction) {
         if (previousInstruction != null) {
             return getNameInternal(instruction, computePreviousDirectionModifier(instruction, previousInstruction));
         } else {

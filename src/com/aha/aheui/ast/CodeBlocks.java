@@ -15,20 +15,19 @@ public class CodeBlocks {
     private CodeBlock startBlock;
     
     public CodeBlock get(Instruction instruction, Instruction previousInstruction) {
-        String name = CodeBlock.getName(instruction, previousInstruction);
+        String name = CodeBlock.getUniqueName(instruction, previousInstruction);
         return codeBlocks.get(name);
     }
     
     public CodeBlock get(Instruction instruction) {
-        String name = CodeBlock.getName(instruction);
-        return codeBlocks.get(name);
+        return get(instruction, null);
     }
     
     public void add(CodeBlock codeBlock) {
-        if (codeBlocks.containsKey(codeBlock.getName())) {
+        if (codeBlocks.containsKey(codeBlock.getUniqueName())) {
             throw new IllegalArgumentException("Codeblock already registered.");
         }
-        codeBlocks.put(codeBlock.getName(), codeBlock);
+        codeBlocks.put(codeBlock.getUniqueName(), codeBlock);
     }
     
     public Collection<CodeBlock> getCodeBlocks() {
@@ -46,14 +45,14 @@ public class CodeBlocks {
     private void computeReferences() {
         inverseReferences.clear();
         for (CodeBlock codeBlock : codeBlocks.values()) {
-            inverseReferences.put(codeBlock.getName(), new ArrayList<CodeBlock>());
+            inverseReferences.put(codeBlock.getUniqueName(), new ArrayList<CodeBlock>());
         }
         for (CodeBlock codeBlock : codeBlocks.values()) {
             if (codeBlock.getNext() != null) {
-                inverseReferences.get(codeBlock.getNext().getName()).add(codeBlock);
+                inverseReferences.get(codeBlock.getNext().getUniqueName()).add(codeBlock);
             }
             if (codeBlock.getAlternativeNext() != null) {
-                inverseReferences.get(codeBlock.getAlternativeNext().getName()).add(codeBlock);
+                inverseReferences.get(codeBlock.getAlternativeNext().getUniqueName()).add(codeBlock);
             }
         }
     }
@@ -64,17 +63,17 @@ public class CodeBlocks {
         CodeBlock codeBlock = nextMergable();
         while (codeBlock != null) {
             CodeBlock next = codeBlock.getNext();
-            codeBlocks.remove(next.getName());
-            inverseReferences.remove(next.getName());
+            codeBlocks.remove(next.getUniqueName());
+            inverseReferences.remove(next.getUniqueName());
             
             // update inverse references
             if (next.getNext() != null) {
-                List<CodeBlock> refs = inverseReferences.get(next.getNext().getName());
+                List<CodeBlock> refs = inverseReferences.get(next.getNext().getUniqueName());
                 refs.remove(next);
                 refs.add(codeBlock);
             }
             if (next.getAlternativeNext() != null) {
-                List<CodeBlock> refs = inverseReferences.get(next.getAlternativeNext().getName());
+                List<CodeBlock> refs = inverseReferences.get(next.getAlternativeNext().getUniqueName());
                 refs.remove(next);
                 refs.add(codeBlock);
             }
@@ -89,7 +88,7 @@ public class CodeBlocks {
         Iterator<Map.Entry<String, List<CodeBlock>>> refIt = inverseReferences.entrySet().iterator();
         while (refIt.hasNext()) {
             Map.Entry<String, List<CodeBlock>> entry = refIt.next();
-            if (!entry.getKey().equals(startBlock.getName())
+            if (!entry.getKey().equals(startBlock.getUniqueName())
                     && entry.getValue().size() == 1) {
                 CodeBlock codeBlock = entry.getValue().get(0);
                 if (codeBlock.getAlternativeNext() == null) {

@@ -65,15 +65,15 @@ public class HangulUtilsTest {
         
         out.println("Number of code blocks: " + codeBlocks.getCodeBlocks().size());
         for (CodeBlock codeBlock : codeBlocks.getCodeBlocks()) {
-            out.println("Block " + codeBlock.getName());
+            out.println("Block " + codeBlock.getUniqueName());
             for (Instruction instruction : codeBlock.getInstructions()) {
                 out.println("    " + instruction.toString());
             }
             if (codeBlock.getNext() != null) {
-                out.println("  Next = " + codeBlock.getNext().getName());
+                out.println("  Next = " + codeBlock.getNext().getUniqueName());
             }
             if (codeBlock.getAlternativeNext() != null) {
-                out.println("  AlternativeNext = " + codeBlock.getAlternativeNext().getName());
+                out.println("  AlternativeNext = " + codeBlock.getAlternativeNext().getUniqueName());
             }
         }
         
