@@ -1,9 +1,5 @@
 package com.aha.aheui.interpreter;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayDeque;
@@ -23,8 +19,8 @@ public class AheuiInterpreter {
     private List<Deque<Integer>> storages;
     private Storage currentStorage;
     private PrintStream out;
-    private InputStream in;
     private PrintStream err;
+    private ProgramInput input;
     
     private boolean alternateNext;
     
@@ -37,7 +33,7 @@ public class AheuiInterpreter {
         try {
             out = new PrintStream(System.out, true, "UTF-8");
             err = new PrintStream(System.err, true, "UTF-8");
-            in = System.in;
+            input = new InputStreamInput(System.in, err);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -83,33 +79,6 @@ public class AheuiInterpreter {
     
     protected void setValue(int value) {
         setValue(currentStorage, value);
-    }
-    
-    // TODO exception management
-    private int readInt(InputStream in) {
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
-            String line;
-        
-            line = reader.readLine();
-            boolean done = false;
-            int value = 0;
-            while (line != null && !done) {
-                try {
-                    value = Integer.parseInt(line);
-                    done = true;
-                } catch (NumberFormatException e) {
-                    err.println("Could not parse number: " + line);
-                    line = reader.readLine();
-                }
-            }
-            if (!done) {
-                throw new RuntimeException("Could not read integer. End of stream occured.");
-            }
-            return value;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
     
     protected void setValue(Storage storage, int value) {
@@ -211,13 +180,14 @@ public class AheuiInterpreter {
 
         @Override
         public Boolean visitReadCharacter(Instruction instruction) {
-            // TODO Auto-generated method stub
-            return super.visitReadCharacter(instruction);
+            char c = input.readCharacter();
+            setValue((int)c);
+            return true;
         }
 
         @Override
         public Boolean visitReadInteger(Instruction instruction) {
-            setValue(readInt(in));
+            setValue(input.readInteger());
             return true;
         }
 
@@ -237,7 +207,7 @@ public class AheuiInterpreter {
 
         @Override
         public Boolean visitSwap(Instruction instruction) {
-            // TODO behaviour in queue
+            // TODO define behavior in queue
             int first = getValue();
             int second = getValue();
             setValue(first);
