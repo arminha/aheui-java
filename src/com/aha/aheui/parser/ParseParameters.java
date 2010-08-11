@@ -7,6 +7,10 @@ import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.hangul.FinalJamo;
 import com.aha.util.Method;
 
+/**
+ *
+ * @author armin
+ */
 class ParseParameters extends AbstractVisitor<Instruction> implements
         Method<Instruction> {
 
