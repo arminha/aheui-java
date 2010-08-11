@@ -18,6 +18,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length != 1) {
             printUsage();
+            System.exit(-1);
         }
         
         String source = null;
