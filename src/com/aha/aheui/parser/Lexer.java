@@ -11,6 +11,12 @@ import com.aha.util.Matrix;
 
 class Lexer {
 
+    /**
+     * 
+     *
+     * @param program the string representation of the Aheui program
+     * @return a Matrix containing the instructions of the program
+     */
     public Matrix<Instruction> getInstructions(String program) {
         BufferedReader reader = new BufferedReader(new StringReader(program));
         Matrix<Instruction> result = new Matrix<Instruction>();
