@@ -150,7 +150,6 @@ class CodeBlockGenerator {
                     instruction.getColumn() + columnDiff);
             if (next == null) {
                 ErrorUtil.error(instruction, reachableUndefinedInstruction, "instruction points to undefined instruction outside of the code matrix.");
-                // TODO
                 throw new NotImplementedException();
             }
             return next;

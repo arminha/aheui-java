@@ -27,7 +27,6 @@ public class Main {
             source = StreamHelper.readAll(fIn, "UTF-8");
             fIn.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             System.exit(-1);
         }

@@ -15,10 +15,6 @@ import com.aha.hangul.MedialJamo;
 import com.aha.util.Matrix;
 import com.aha.util.Tuple;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class HangulUtilsTest {
