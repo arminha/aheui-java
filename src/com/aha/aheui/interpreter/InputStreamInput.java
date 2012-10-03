@@ -19,8 +19,19 @@ public class InputStreamInput implements ProgramInput {
 
     @Override
     public char readCharacter() {
-        // TODO Auto-generated method stub
-        return 0;
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+            String line;
+
+            line = reader.readLine();
+            if (line != null && line.length() > 0) {
+                return line.charAt(0);
+            } else {
+                return '\n';
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -28,8 +39,8 @@ public class InputStreamInput implements ProgramInput {
         return readInt(in, err);
     }
     
-    // TODO exception management
     private int readInt(InputStream in, PrintStream err) {
+        // TODO better exception management
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
             String line;
