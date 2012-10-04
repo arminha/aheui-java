@@ -1,0 +1,1117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<title>Specification</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+body.xhtmlEditorBody {
+        clear: both;
+        margin: 0;
+        padding: 0 23px 0 22px;
+        line-height: 2em;
+        font-size: 0.75em;
+}
+body.en {
+        font-family: arial;
+}
+body.en h1,
+body.en h2,
+body.en h3,
+body.en h4,
+body.en h5,
+body.en h6 {
+        font-family: arial, sans-serif;
+}
+.xhtmlEditorBody * {
+        line-height: 2em;
+}
+.xhtmlEditorBody img {
+        max-width: 100%;
+        border: 0 none;
+}
+.xhtmlEditorBody a,
+.xhtmlEditorBody a:visited,
+.xhtmlEditorBody a:hover {
+        color: #568942 !important;
+        text-decoration: underline;
+        cursor: pointer !important;
+}
+.xhtmlEditorBody a.wiki,
+.xhtmlEditorBody a.wiki:visited,
+.xhtmlEditorBody a.wiki:hover {
+        color: #002BB8 !important;
+        text-decoration: underline;
+        cursor: pointer !important;
+}
+.xhtmlEditorBody p {
+        margin: 0;
+}
+.xhtmlEditorBody em.italic {
+        font-style: italic !important;
+}
+.xhtmlEditorBody em.italic * {
+        font-style: italic !important;
+}
+.xhtmlEditorBody em.underline {
+        font-style: normal;
+        text-decoration: underline;
+}
+.xhtmlEditorBody span.strike{
+        text-decoration: line-through;
+}
+body.xhtmlEditorBody span.super,
+body.xhtmlEditorBody span.sub {
+        position: relative;
+        font-size: 0.6em;
+}
+div.xhtmlEditorBody span.super,
+div.xhtmlEditorBody span.sub {
+        position: relative;
+        font-size: 0.9em;
+}
+body.xhtmlEditorBody span.super,
+div.xhtmlEditorBody span.super {
+        top: -0.4em;    
+}
+body.xhtmlEditorBody span.sub,
+div.xhtmlEditorBody span.sub {
+        bottom: -0.4em;
+}
+
+
+/* 윗첨자 */
+.xhtmlEditorBody sup {
+        font-size: 0.916em;
+        position: relative;
+        top: 0.1em;
+        line-height: 0.8em;
+}
+/* 아랫첨자 */
+.xhtmlEditorBody sub {
+        font-size: 0.916em;
+        position: relative;
+        bottom: -0.3em;
+        line-height: 0.8em;
+}
+/* 구분선 */
+.xhtmlEditorBody hr {
+        margin: 0 0 1.835em 0;
+        bottom: -0.9em;
+        position: relative;
+        background: none;
+        border: none;
+        border-top: 1px solid #000;
+}
+
+/* 단락제목 공통 */
+.xhtmlEditorBody h1,
+.xhtmlEditorBody h2,
+.xhtmlEditorBody h3,
+.xhtmlEditorBody h4,
+.xhtmlEditorBody h5,
+.xhtmlEditorBody h6 {
+        margin: 0;
+        color: #223d67;
+        font-family: malgun gothic, dotum, gulim, sans-serif;
+}
+/* 단락제목1 */
+.xhtmlEditorBody h1 {
+        font-size: 2em;
+        background: url(http://static.springnote.com/images/bg/heading1.gif) repeat-x 0 100%;
+}
+/* 단락제목2 */
+.xhtmlEditorBody h2 {
+        font-size: 1.833em;
+        line-height: 2.181em;
+        background: url(http://static.springnote.com/images/bg/heading2.gif) repeat-x 0 100%;
+}
+/* 단락제목3 */
+.xhtmlEditorBody h3 {
+        font-size: 1.5em;
+        line-height: 2.666em;
+        background: url(http://static.springnote.com/images/bg/heading3.gif) repeat-x 0 100%;
+}
+/* 단락제목4 */
+.xhtmlEditorBody h4 {
+        font-size: 1.333em;
+        line-height: 3em;
+        background: url(http://static.springnote.com/images/bg/heading4.gif) repeat-x 0 100%;
+}
+/* 단락제목5 */
+.xhtmlEditorBody h5 {
+        font-size: 1.166em;
+        line-height: 3.428em;
+        background: url(http://static.springnote.com/images/bg/heading5.gif) repeat-x 0 100%;
+}
+/* 단락제목6 */
+.xhtmlEditorBody h6 {
+        font-size: 1em;
+        background: url(http://static.springnote.com/images/bg/heading6.gif) repeat-x 0 100%;
+}
+
+/* 리스트 공통 */
+.xhtmlEditorBody ul,
+.xhtmlEditorBody ol {
+        margin: 0;
+        padding: 0 0 0 24px;
+        /padding-left: 28px;
+}
+/* 아이콘 리스트 */
+.xhtmlEditorBody ul.list-type-1 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style01_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style01.gif); }
+.xhtmlEditorBody ul.list-type-2 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style02_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style02.gif); }
+.xhtmlEditorBody ul.list-type-3 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style03_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style03.gif); }
+.xhtmlEditorBody ul.list-type-4 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style04_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style04.gif); }
+.xhtmlEditorBody ul.list-type-5 { list-style-image: url(http://static.springnote.com/images/bullet/_list_style05_ff.gif);/list-style-image: url(http://static.springnote.com/images/bullet/_list_style05.gif); }
+
+.xhtmlEditorBody ul.arrowListType { list-style-image: url(http://static.springnote.com/images/template/ic_arrow01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_arrow01.gif); }
+.xhtmlEditorBody ul.bookListType { list-style-image: url(http://static.springnote.com/images/template/ic_book01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_book01.gif); }
+.xhtmlEditorBody ul.checkListType { list-style-image: url(http://static.springnote.com/images/template/ic_check01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_check01.gif); }
+.xhtmlEditorBody ul.panListType { list-style-image: url(http://static.springnote.com/images/template/ic_pan01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_pan01.gif); }
+.xhtmlEditorBody ul.pageListType { list-style-image: url(http://static.springnote.com/images/template/ic_page01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_page01.gif); }
+.xhtmlEditorBody ul.memberListType { list-style-image:url(http://static.springnote.com/images/template/ic_member01_ff.gif);/list-style-image:url(http://static.springnote.com/images/template/ic_member01.gif); }
+.xhtmlEditorBody ul.noticeListType { list-style-image: url(http://static.springnote.com/images/template/ic_notice01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_notice01.gif); }
+.xhtmlEditorBody ul.websiteListType { list-style-image: url(http://static.springnote.com/images/template/ic_website01_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_website01.gif); }
+.xhtmlEditorBody ul.groupType { list-style-image: url(http://static.springnote.com/images/template/ic_group_ff.gif);/list-style-image: url(http://static.springnote.com/images/template/ic_group.gif); }
+
+
+/* 코드 */
+.xhtmlEditorBody ol.code {
+        padding-left: 38px;
+        background: #EFEFEF url(http://static.springnote.com/images/icon/contextCodeBg.gif) no-repeat 8px 7px;
+        font-family: Monaco,GulimChe,"Courier new",monospace;
+}
+.xhtmlEditorBody ol.code li {
+        list-style-type: none;
+}
+
+/* 인용 단락 */
+.xhtmlEditorBody blockquote {
+        margin: 0;
+        padding: 0 0 0 38px;
+        background: #EFEFEF url(http://static.springnote.com/images/icon/contextBlockquoteBg.gif) no-repeat 14px 4px;
+}
+/* 이모티콘 */
+.xhtmlEditorBody img.emoticon {
+        vertical-align: middle;
+}
+.xhtmlEditorBody h1 img.emoticon,
+.xhtmlEditorBody h2 img.emoticon,
+.xhtmlEditorBody h3 img.emoticon,
+.xhtmlEditorBody h4 img.emoticon,
+.xhtmlEditorBody h5 img.emoticon {
+        /margin: 12px 0;        
+}
+.xhtmlEditorBody h6 img.emoticon {
+        vertical-align: top;
+        /vertical-align: middle;
+}
+/* 섹션 */
+.xhtmlEditorBody div {
+        padding: 0 0 0 12px;
+        background-color: #F9F9D8;
+}
+
+/* 테이블 */
+.xhtmlEditorBody table {
+        width: 96%;
+        margin: 1px 0;
+        border-collapse: collapse;
+        font-size: 1em;
+        background-color: #FFFFFF;
+}
+.xhtmlEditorBody table caption {
+        text-align: left;
+}
+.xhtmlEditorBody table th,
+.xhtmlEditorBody table td {
+        margin: 0;
+        padding: 0 3px;
+        border: 1px solid #999;
+}
+.xhtmlEditorBody table th {
+        font-weight: normal;
+        background-color: #e7e7e7;
+}
+.xhtmlEditorBody table td {
+        overflow: hidden;
+}
+/* 지도 */
+div.geo {
+        background-color: transparent;
+        width: 561px;
+        height: 394px;
+}
+div.geo .latitude,
+div.geo .longitude {
+        display: none;
+}
+/*]]>*/
+</style>
+
+<style type="text/css">
+/*<![CDATA[*/
+/*---------------------------------------------------------------
+template
+---------------------------------------------------------------*/
+div.xqtemplate {
+        background:white;
+}
+div.xqtemplate div {
+        background:white;
+}
+div.xqtemplate h1 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading1.gif);       
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+div.xqtemplate h2 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading2.gif);
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;    
+}
+div.xqtemplate h3 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading3.gif);
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+div.xqtemplate h4 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading4.gif);
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+div.xqtemplate h5 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading5.gif);
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+div.xqtemplate h6 {
+        color:#9c0;
+        background-image: url(http://static.springnote.com/images/template/heading5.gif);
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+div.xqtemplate ul{
+        list-style-image: url(http://static.springnote.com/images/template/ic_bullet.gif);
+}
+div.xqtemplate li p{
+        display: inline;
+}
+div.xqtemplate ul.balloon{
+        list-style-image: url(http://static.springnote.com/images/template/ic_balloon.gif);
+}
+div.xqtemplate ul.pencil{
+        list-style-image: url(http://static.springnote.com/images/template/ic_pencil.gif);
+}
+div.xqtemplate ul.notice{
+        list-style-image: url(http://static.springnote.com/images/template/ic_notice.gif);
+}
+div.xqtemplate ul.notice ul{
+        list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif);
+}
+div.xqtemplate ul.check{
+        list-style-image: url(http://static.springnote.com/images/template/ic_check.gif);
+}
+div.xqtemplate ul.subject{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_pencil.gif); 
+}
+div.xqtemplate ul.member{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_member.gif); 
+}
+div.xqtemplate ul.website{
+        list-style-image: url(http://static.springnote.com/images/template/ic_website.gif);
+}
+div.xqtemplate ul.book{
+        list-style-image: url(http://static.springnote.com/images/template/ic_book.gif);
+}
+div.xqtemplate ul.pan{
+        list-style-image: url(http://static.springnote.com/images/template/ic_pan.gif);
+}
+div.xqtemplate ul.thread_root {
+        list-style-image: url(http://static.springnote.com/images/template/ic_talk.gif);
+}
+div.xqtemplate ul.thread_root ul {
+        list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif);
+}
+
+div.bookshelf ul{ 
+        list-style-image: url(http://static.springnote.com/images/template/ic_book.gif)
+}
+div.bookshelf ul ul{ 
+        list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif)
+}
+div.scrap ul{ 
+        list-style-image: url(http://static.springnote.com/images/template/ic_website.gif)
+}
+div.scrap ul ul{ 
+        list-style-image: url(http://static.springnote.com/images/template/ic_arrow.gif)
+}
+div.recipe img.icon{ 
+    float:none;
+    margin:0 5px;
+    vertical-align:middle; 
+}
+table.recipe td ul{ 
+        list-style-image:url(http://static.springnote.com/images/template/ic_bullet.gif);
+}
+div.report h1{ 
+    text-align:center;
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading1.gif);
+}
+div.report h2{ 
+    text-align:center;
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading2.gif);
+}
+div.report h3{ 
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading3.gif);
+}
+div.report h4{ 
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading4.gif);
+}
+div.report h5{ 
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading5.gif);
+}
+div.report h6{ 
+        color:#223D67; 
+        background-image: url(http://static.springnote.com/images/bg/heading6.gif);
+}
+div.report div.cover{
+    text-align:right;
+}
+div.xqtemplate table {
+        border-collapse:collapse;
+    width:98%;
+    margin:10px 0px 10px 0px;
+        font-size:1em; 
+}
+div.xqtemplate table th{ 
+    margin:0;
+    border:solid 1px silver;
+    background:white;
+        color:#99CC00;
+        padding:0.3em;
+        line-height:2em; 
+}
+div.xqtemplate table td{ 
+    margin:0;
+    border:solid 1px #cfcfcf;
+    background:white;
+    text-align:center; 
+    line-height:2em;
+}
+div.xqtemplate table.appointment {
+        table-layout:fixed;
+}
+div.xqtemplate table.weekly {
+        table-layout:fixed;
+}
+div.xqtemplate table.weekly td{
+    text-align:left;
+    vertical-align:top;
+}
+div.xqtemplate table.diet td.weight{ 
+        color:black;
+}
+div.xqtemplate table.diet td.menu{ 
+    text-align:left;
+}
+
+div.xqtemplate table.timetable{ 
+        table-layout:fixed;
+}
+div.xqtemplate table.timetable td.time{ 
+    font-weight:bold;
+    color:gray;
+}
+div.xqtemplate table.timetable td{ 
+    width:12%; 
+}
+div.xqtemplate table.layout {
+        border:4px solid #b5e2db;
+    overflow:hidden;
+        table-layout:fixed;
+}
+div.xqtemplate table.layout td.left{
+        text-align:left;
+    width:150px;
+    padding:1em 1em 1em 1em;
+    margin-right:0.3em;
+    border:none;
+    vertical-align:top;
+}
+div.xqtemplate table.layout td.center{
+        text-align:left;
+    background:white url(http://static.springnote.com/images/template/bg_spring.gif) repeat-y scroll right; 
+    border:none;
+    padding:1em 1em 1em 1em;
+    vertical-align:top;
+    width:34%;
+}
+div.xqtemplate table.layout td.right{
+        text-align:left;
+    padding:1em 1em 1em 1em;
+    border:none;
+    vertical-align:top;
+}
+div.xqtemplate table.layout td p.dashTitle{ 
+    color:#9c0;
+    font-size: 1.75em;
+    font-family:tahoma;
+}
+div.xqtemplate table.layout td.right ul{ 
+    list-style-position:inside;
+}
+div.dashboard table.layout td.right ul{ 
+    list-style-image:url(http://static.springnote.com/images/template/ic_page.gif); 
+}
+div.meeting table.layout td.left { 
+        width:50%;
+}
+div.meeting table.layout td.right { 
+        width:410px;
+}
+div.profile table.layout h4 img{ 
+    vertical-align:center; 
+}
+div.profile table.layout td.right p.n{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#9c0; 
+}
+div.profile table.layout td.left p.n{ 
+        width:130px;
+}
+div.recipe table.layout td.left{ 
+    width:410px;
+}
+div.knowledge-dashboard table td{
+        text-align:left;
+}
+
+
+/*---------------------------------------------------------------
+New template > 20080318
+---------------------------------------------------------------*/
+
+table.xqtTable {        
+    border-collapse:collapse;
+    width:98%;
+    margin:10px 0px 10px 0px;
+        font-size:1em;
+    border: 1px solid #c0c0c0;
+}
+table.xqtTable img {
+        max-width: none !important;
+}
+table.xqtTable th{ 
+    margin:0;
+    border: 1px solid #c0c0c0;
+    background:white;
+        color:#99CC00;
+        padding:0.3em;
+        line-height:2em; 
+}
+table.xqtTable td{ 
+    margin:0;
+    border:solid 1px #cfcfcf;
+    background:white;
+    line-height:2em;
+    vertical-align: top;
+        padding:0.3em;
+}
+table.blackBoard {
+        border:4px solid #b5e2db;
+    overflow:hidden;
+        table-layout:fixed;
+}
+table.blackBoard td.leftBoard{
+        text-align:left;
+    width:150px;
+    padding:1em 1em 1em 1em;
+    margin-right:0.3em;
+    border:none;
+    vertical-align:top;
+}
+table.blackBoard td.centerBoard{
+        text-align:left;
+    background:white url(http://static.springnote.com/images/template/bg_spring.gif) repeat-y scroll right; 
+    border:none;
+    padding:1em 1em 1em 1em;
+    vertical-align:top;
+    width:40%;
+}
+table.blackBoard td.rightBoard{
+        text-align:left;
+    padding:1em 1em 1em 1em;
+    border:none;
+    vertical-align:top;
+}
+table.blackBoard td p.dashTitle{ 
+    color:#9c0;
+    font-size:1.75em;
+    font-family:tahoma;
+}
+table.blackBoard td.rightBoard ul{ 
+    list-style-position:inside;
+}
+h1.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading1.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+h2.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading2.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+h3.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading3.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+h3.xqtHeading2 {
+        margin: 0;
+        color:#333;
+        background: url(http://static.springnote.com/images/template/heading4_1.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+        font-family: malgun gothic, sans-serif;
+        font-size: 1.5em;
+}
+h4.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading4.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+h5.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading5.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+h6.xqtHeading {
+        margin: 0;
+        color:#9c0;
+        background: url(http://static.springnote.com/images/template/heading5.gif) no-repeat 0 100%;
+        _padding-bottom: 10px;
+        _margin-bottom: 5px;
+}
+span.year{ 
+    font-size:3.583em;
+    font-family:verdana;
+    font-weight:bold;
+    color:#99CC00;
+        letter-spacing: -1px;
+}
+.theme{ 
+    font-size:2.166em;
+    font-family:malgun gothic;
+    font-weight:bold;
+    color:#99cc00; 
+}
+span.separate { 
+    font-size:3.583em;
+    font-family:gulim;
+    color:#dcdcdc;
+}
+span.month{ 
+    font-size:3.583em;
+    font-family:verdana;
+    font-weight:bold;
+    color:#787878; 
+        letter-spacing: -1px;
+}
+span.term{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#787878; 
+}
+span.date{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#787878; 
+}
+span.description{ 
+    font-size:1.25em;
+    font-family:verdana;
+    color:#999; 
+}
+span.sunday {
+        color:#ff9933;
+}
+span.saturday {
+        color:#66ccff;
+}
+table.calendar p.date{ 
+    text-align:left;
+    margin:0.5em 0.5em; 
+}
+table.calendar td.vevent{ 
+     width:14%;
+}
+table.calendar abbr.dtstart{ 
+    text-decoration:none;
+    color:#111111;
+}
+table.calendar2 {
+        border: none;
+        table-layout: fixed;
+}
+table.calendar2 th {
+        text-align: left;
+        font-weight: bold;
+        color: #fff;
+        background-color: #99cc00;
+        font-family: arial, sans-serif;
+        font-size: 0.916em;
+        border: 1px solid #fff;
+        border-top-color: #99cc00;
+        border-bottom: none;
+        padding-top: 1px;
+        padding-bottom: 2px;
+}
+table.calendar2 th,
+table.calendar2 td {
+        width: 14%;
+} 
+table.calendar2 th.sun {
+        background-color: #ff9933;      
+        border-left-color: #ff9933;     
+        border-top-color: #ff9933;
+}
+table.calendar2 th.sat {
+        background-color: #66ccff;
+        border-right-color: #66ccff;
+        border-top-color: #66ccff;
+}
+table.calendar2 tr.date td {
+        border-bottom: none;
+        background-color: #f6f6f6;
+}
+table.calendar2 tr.date td a {
+        font-weight: bold;
+        color: #666 !important;
+        font-family: arial, sans-serif;
+        text-decoration: none !important;
+}
+table.calendar2 tr.date td.sun,
+table.calendar2 tr.date td.sat {
+        border-bottom: none;
+        background-color: #efefef;
+}
+table.calendar2 tr.date td.sun a {
+        color: #f1771d !important;
+}
+table.calendar2 tr.date td.sat a {
+        color: #2a99d0 !important;
+}
+table.calendar2 tr.summary td {
+        border-top: none;
+        background-color: #fff; 
+} 
+table.calendar2 tr.summary td.sun,
+table.calendar2 tr.summary td.sat {
+        background-color: #f7f7f7;
+}
+table.business {
+        border: none;
+}
+table.business th {
+        font-family: dotum;
+        font-size: 1.166em;
+        font-weight: bold;
+        background-color: #99cc00;
+        color: #fff;
+        padding-top: 3px;
+        padding-bottom: 2px;
+        border: 1px solid #99cc00;
+        border-right: 1px solid #fff;
+        border-top: none;
+}
+table.business tr.project td {
+        background-color: #f6f6f6;
+        color: #666;
+        font-weight: bold;
+}
+div.usage { 
+    clear:both;
+    color:#339;
+    padding:0.3em;
+    border:1px solid #c90;
+    background:#ff9 !important; 
+}
+div.title {
+        background:white;
+        text-align:left;
+        margin:1.5em 0em 0em;
+        /line-height:3em;
+        /padding-bottom:1em;
+}
+div.goal {
+        background:white;
+        text-align:left;
+        margin:1.5em 0em 0em;
+    float:right; 
+        /line-height:3em;
+        /padding-bottom:1em;
+}
+
+div.goal span{ 
+    font-size:3.583em;
+    font-family:tahoma;
+    font-weight:bold;
+    color:#4B2DFF; 
+}
+
+table.monthlyplan td{ 
+    width:46%; 
+}
+table.monthlyplan tbody th{ 
+    width:4%;
+}
+table.fixed {
+        table-layout:fixed;
+}
+table.meeting td.leftBoard { 
+        width:50%;
+}
+table.meeting td.rightBoard { 
+        width:410px;
+}
+table.recipe td.leftBoard { 
+    width:410px;
+}
+/*]]>*/
+</style>
+</head>
+<body class="xhtmlEditorBody background_no" id="viewXhtml_body">
+<h1 class="printNxhtmlTitle hentry" style="display: none;"><a href=
+"http://puzzlet.springnote.com/pages/219154" rel=
+"bookmark">Specification</a></h1>
+<h1 style="text-align: center;">Aheui</h1>
+<p style="text-align: center;"><q style="text-align: center;">Why
+should ASCII have all the fun? :)</q></p>
+<p style="text-align: right;"><a href=
+"http://puzzlet.springnote.com/pages/219225.xhtml" title=
+"Puzzlet Chung" class="wiki">Puzzlet Chung</a></p>
+<p>&nbsp;</p>
+<p>Aheui(아희) is an esoteric programming language, first ever to be
+designed for the <a href="http://en.wikipedia.org/wiki/Hangul"
+title="Hangeul" class="external">Hangul</a>/Hangeul. The aim of the
+language is to reflect the graphical design of Hangul.</p>
+<p>&nbsp;</p>
+<h2>"Aheul"</h2>
+<p>"아희"("aheui") is an archaic term for "child" or "youngster",
+mainly found as an idiom "아희야"("aheui-ya", coincidently mathches
+with "<a href="http://en.wikipedia.org/wiki/Oh_Boy" title=
+"Oh, boy!" class="external">Oh, boy!</a>") in 15th-to-18th-century
+Korean poetry called <a href="http://en.wikipedia.org/wiki/Sijo"
+title="Sijo" class="external">Sijo</a>. IPA notation for
+pronunciation of "aheui" is /ɑ.hɨj/(X-SAMPA `/A.h1j/`), or
+/ɑ.hɰi/(`/A.hM\i/`). However, since English language has no exact
+equivalent sounds of /ɨ/ and /ɰ/, it is acceptable to call it
+"AH-hi"/ɑ.hi/.</p>
+<p>&nbsp;</p>
+<h2>Structure of Hangul</h2>
+<p>Also known as "Korean alphabet", Hangul is truly an alphabetic
+system, in which each symbol represents separate phoneme, or
+sound.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>아희</p>
+</blockquote>
+<p>&nbsp;</p>
+<p>Every Hangul letter has a structure, that is, a constant is
+juxtaposed or surrounded by a vowel. You can recognize vowel
+symbols easily, as they are bar-shaped, often with an attached
+little rod or two. All of Hangul vowel symbols are following:</p>
+<blockquote>
+<p>ㅏㅓㅗㅜㅡㅣ<br />
+ㅑㅕㅛㅠㅢ<br />
+<br />
+ㅘㅚ　ㅐㅙ<br />
+ㅝㅟ　ㅔㅞ</p>
+</blockquote>
+<p>Last eight complex vowels are not recognized as a feature of
+Aheui but as ornamental symbols; so you can ignore them.</p>
+<p>&nbsp;</p>
+<p>Lecturing on which-symbol-stands-for-which-sound is too far from
+the purpose of this document. However, it is notable that
+similar-looking symbols represent similar sound, as all consonants
+can be classified into five groups:</p>
+<blockquote>
+<p>ㄱㅋ<br />
+ㄴㄷㅌㄹ<br />
+ㅁㅂㅍ<br />
+ㅅㅈㅊ<br />
+ㅇㅎ</p>
+</blockquote>
+<p>These consonants can also be placed under each letter, as well
+as on the top of the character surrounded by a vowel. The consonant
+on the top is called the "initial" consonant while on the bottom is
+the "final" consonant.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>안흼</p>
+</blockquote>
+<p>&nbsp;</p>
+<p>In Aheui, functions of consonants and vowels are different each
+other.</p>
+<p>&nbsp;</p>
+<h2>Aheui specification</h2>
+<p><span style="color: rgb(255, 0, 0);"><strong>WARNING:</strong>
+This spec is incomplete and subject to change.</span></p>
+<p>&nbsp;</p>
+<p>Typical code of Aheui is a two-dimensional space of Hangul
+characters, where each character is a command. In there cursor is
+moving around to execute the character which is under the cursor,
+similar to the intruction pointer of Funge-98.</p>
+<p>&nbsp;</p>
+<p>As mentioned above, consonants and vowels have different
+fuctions. While the consonant is the actual instruction, the vowel
+is to determine the cursor's next position. Precisely, when the
+cursor meets a character, it is engaged to the following
+process:</p>
+<ul>
+<li>Cursor executes the command, according to the initial consonant
+of the character. Final consonant might be used as an argument, if
+needed by the initial.</li>
+<li>Cursor moves, according to the vowel's direction.</li>
+</ul>
+<p>There is more than one storage in Aheui. Most of them stacks,
+and one queue. Also the extension feature is treated as a
+quasi-stack where you "push" the input packets and "pop" the output
+packets. In any of the instructions involving a pop or two,
+including duplication, if a storage has less element than the
+instruction requires, the cursor doesn't execute the instruction
+but moves according to the vowel only.</p>
+<p>&nbsp;</p>
+<h3>Vowels: the Directions</h3>
+<p>Little rod attached to the bar indicates the direction of the
+cursor.</p>
+<ul>
+<li>ㅏ, ㅓ, ㅗ, and ㅜ moves cursor by one character right, left, top,
+bottom respectively.</li>
+<li>ㅑ, ㅕ, ㅛ, and ㅠ moves cursor by two characters right, left, top,
+bottom respectively.</li>
+<li>ㅡ, ㅣ, and&nbsp; ㅢ are the "reflectors". The cursor moves back
+to where it had come from. While ㅢ reflects all movement of the
+cursor, ㅡ reflects only vertical movement of the cursor, as ㅣ does
+horizontal movement only. The movement which is not reflected moves
+in the direction it went, by the law of inertia.</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Consonants: the Commands</h3>
+<p>The ㅇ group: null</p>
+<ul>
+<li>ㅇ, as it is shaped, is the <strong>null</strong> command, which
+does nothing. The cursor will immediately move as the vowel
+indicates.</li>
+<li>ㅎ is the <strong>terminate</strong> command. The cursor stops
+at the character and terminates the execution.</li>
+</ul>
+<p>Hence "아희" itself is the code, which would be a null
+program.</p>
+<p>&nbsp;</p>
+<p>The ㄴ group: arithmatic</p>
+<ul>
+<li>ㄷ is the <strong>add</strong> command. The cursor pops two
+element from the current storage, and pushes the sum of two
+values.</li>
+<li>ㄸ is shaped double-ㄷ, hence the <strong>multiply</strong>
+command. The cursor pops two element from the current storage, and
+pushes the product of two values.</li>
+<li>ㄴ is the <strong>divide</strong> command. The cursor pops two
+element from the current storage, divide latter value by former
+value(latter/former), and pushes the result.</li>
+<li>ㅌ is the <strong>subtract</strong> command. The cursor pops two
+element from the current storage, subtract former value from latter
+value(latter-former), and pushes the result.</li>
+<li>ㄹ is the <strong>modulo</strong> command. The cursor pops two
+element from the current storage, and pushes (latter value) modulo
+(former value)</li>
+</ul>
+<p>The ㅁ group: storage</p>
+<ul>
+<li>ㅁ is the <strong>pop</strong> command. The cursor pops an
+element from the current storage. Final consonanat can be applied
+by case. (See below.)</li>
+<li>ㅂ is the <strong>push</strong> command. The cursor pushes an
+element to the current storage. The value to push is specified by
+the final consonant. (See below.)</li>
+<li>ㅃ, double-ㅂ, is the&nbsp;<strong>duplicate</strong> command. If
+the current storage is a stack, the cursor copies the top element.
+If the current storage is a queue, the cursor copies the front
+element.</li>
+<li>ㅍ is the <strong>swap</strong> command. The cursor swaps two
+elements .</li>
+</ul>
+<p>&nbsp;In ㅁ command, only ㅇ and ㅎ are recognized as a final
+consonant. With ㅇ, the cursor pops an element from the storage and
+prints it as an integer. ㅎ specifies the cursor prints the
+character corresponding the value as the Unicode codepoint.</p>
+<p>That is same as in ㅂ command, where ㅇ specifies the cursor to
+receives an integer from user input and pushes it into the storage,
+and ㅎ receives a character and pushes the Unicode code point. And
+other final consonant of the ㅂ command stands for the value to be
+pushed into the storage, which is specified by the line segments
+that the consonant is consist of:</p>
+<table class="datatable" summary="표에 대한 요약 설명">
+<tbody>
+<tr>
+<td>&nbsp;ㄱ</td>
+<td>ㄴ</td>
+<td>ㄷ</td>
+<td>ㄹ</td>
+<td>ㅁ</td>
+<td>ㅂ</td>
+<td>ㅅ</td>
+<td>ㅈ</td>
+<td>ㅊ</td>
+<td>ㅋ</td>
+<td>ㅌ</td>
+<td>ㅍ</td>
+</tr>
+<tr>
+<td>&nbsp;2</td>
+<td>&nbsp;2</td>
+<td>&nbsp;3</td>
+<td>&nbsp;5</td>
+<td>&nbsp;4</td>
+<td>&nbsp;4</td>
+<td>&nbsp;2</td>
+<td>&nbsp;3</td>
+<td>&nbsp;4</td>
+<td>&nbsp;3</td>
+<td>&nbsp;4</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>In Korean language, these "consonant clusters" are also valid as
+placed in the final. They are also used in Ahui&nbsp; usefully for
+higher number, if you can remember which one is valid:</p>
+<table class="datatable" summary="표에 대한 요약 설명">
+<tbody>
+<tr>
+<td>&nbsp;ㄲ</td>
+<td>ㄳ</td>
+<td>ㄵ</td>
+<td>ㄶ</td>
+<td>ㄺ</td>
+<td>ㄻ</td>
+<td>ㄼ</td>
+<td>ㄽ</td>
+<td>ㄾ</td>
+<td>ㄿ</td>
+<td>ㅀ</td>
+<td>ㅄ</td>
+<td>ㅆ</td>
+</tr>
+<tr>
+<td>&nbsp;4</td>
+<td>&nbsp;4</td>
+<td>&nbsp;5</td>
+<td>&nbsp;5</td>
+<td>&nbsp;7</td>
+<td>&nbsp;9</td>
+<td>&nbsp;9</td>
+<td>&nbsp;7</td>
+<td>&nbsp;9</td>
+<td>&nbsp;9</td>
+<td>&nbsp;8</td>
+<td>&nbsp;6</td>
+<td>&nbsp;4</td>
+</tr>
+</tbody>
+</table>
+<p>ㅂ command with no final consonant pushes zero. There is no way
+to push 1 explicitly, but it is possible by simple arithmatic, such
+as `반반나`(2/2), `밤받타`(4-3).</p>
+<p>The ㅅ group: miscellaneous</p>
+<ul>
+<li>ㅅ is <strong>select</strong> command, where the cursor selects
+the storage. The final consonant specifies which storage is to be
+selected. (See below.)</li>
+<li>ㅆ is <strong>transfer</strong> commmand. The cursor pops an
+element from the current storage, and pushes it into the storage
+that the final consonant indicates.</li>
+<li>ㅈ is shaped like balance scales, and this is the
+<strong>compare</strong> command. The cursor pops two elements from
+the current storage. If the latter value is grater than or equal to
+the former value, the cursor pushes 1, otherwise 0.</li>
+<li>ㅊ has many forks, so it is the <strong>decide</strong> command.
+The cursor pops an element from the current storage. If the value
+is non-zero, the cursor moves as is specified by the vowel. If the
+value is zero, the cursor moves *opposite* from the vowel's
+direction.</li>
+</ul>
+<p>&nbsp;Storages you can specify with ㅅ and ㅆ commands are (none),
+ㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ, ㅇ, ㅅ, ㅈ, ㅊ, ㅋ, ㅌ, ㅍ, ㅎ, ㄲ, ㄳ, ㄵ, ㄶ, ㄺ, ㄻ, ㄼ, ㄽ,
+ㄾ, ㄿ, ㅀ, ㅄ, and ㅆ. All are stacks except ㅇ, which is the queue, and
+ㅎ, which is the protocol the cursor communicate with an
+extension.</p>
+<p>The default storage which is selected at the very beginning of
+the execusion is the (none) stack.</p>
+<p>&nbsp;</p>
+<h3>Implementation</h3>
+<p>The code of Aheui is written in UTF-8 encoding. Only Hangul
+syllables (from U+!AC00 to U+!D7A3) are recognized as a command;
+others are ignored.</p>
+<p>&nbsp;</p>
+<h3>Example</h3>
+<p>This code prints "Hello, world!"</p>
+<ol class="code">
+<li>밤밣따빠밣밟따뿌</li>
+<li>빠맣파빨받밤뚜뭏</li>
+<li>돋밬탕빠맣붏두붇</li>
+<li>볻뫃박발뚷투뭏붖</li>
+<li>뫃도뫃희멓뭏뭏붘</li>
+<li>뫃봌토범더벌뿌뚜</li>
+<li>뽑뽀멓멓더벓뻐뚠</li>
+<li>뽀덩벐멓뻐덕더벅</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Acknowledgement</h3>
+<p>I would like to thank Seong-hoon "Tokigun" Kang who helped me a
+lot working with the specification.</p>
+<p>&nbsp;</p>
+<h3>Links</h3>
+<ul>
+<li><a href="http://puzzlet.org/html/jsaheui.html" title=
+"http://puzzlet.org/html/jsaheui.html" class=
+"external">http://puzzlet.org/html/jsaheui.html</a>&nbsp;-
+interpreter written in JavaScript</li>
+<li><a href="http://dev.tokigun.net/esolang/ahui/ahui.py" title=
+"http://dev.tokigun.net/esolang/ahui/ahui.py" class=
+"external">http://dev.tokigun.net/esolang/ahui/ahui.py</a> -
+interpreter written in Python</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

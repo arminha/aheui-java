@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<title>Aheui</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 5951 2009-05-18 18:03:10Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left{
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: left }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="aheui">
+<h1 class="title">Aheui</h1>
+
+<p>Aheui(아희) is an esoteric programming language, first ever to be designed for
+the <a class="reference external" href="http://en.wikipedia.org/wiki/Hangul">Hangul</a>/Hangeul.
+The aim of the language is to reflect the graphical design of Hangul.</p>
+<div class="section" id="id1">
+<h1>&quot;Aheui&quot;</h1>
+<p>&quot;아희&quot;(&quot;aheui&quot;) is an archaic term for &quot;child&quot; or &quot;youngster&quot;, mainly found as an
+idiom &quot;아희야&quot;(&quot;aheui-ya&quot;, coincidently mathches with
+&quot;<a class="reference external" href="http://en.wikipedia.org/wiki/Oh_Boy">Oh,_boy!</a>&quot;) in 15th-to-18th-century
+Korean poetry called <a class="reference external" href="http://en.wikipedia.org/wiki/Sijo">Sijo</a>.
+IPA notation for pronunciation of &quot;aheui&quot; is
+/ɑ.hɨj/(X-SAMPA `/A.h1j/`), or /ɑ.hɰi/(`/A.hM\i/`). However, since the English
+language has no exact equivalent sounds of /ɨ/ and /ɰ/, it is acceptable to
+call it &quot;AH-hi&quot;/ɑ.hi/.</p>
+</div>
+<div class="section" id="structure-of-hangul">
+<h1>Structure of Hangul</h1>
+<p>Also known as &quot;Korean alphabet&quot;, Hangul is truly an alphabetic system, in which
+each symbol represents separate phoneme, or sound.</p>
+<pre class="literal-block">
+아희
+</pre>
+<p>Every Hangul letter has a structure, that is, a constant is juxtaposed or
+surrounded by a vowel. You can recognize vowel symbols easily, as they are bar-
+shaped, often with an attached little rod or two. All of Hangul vowel symbols
+are following:</p>
+<pre class="literal-block">
+ㅏㅓㅗㅜㅡㅣ
+ㅑㅕㅛㅠㅢ
+
+ㅘㅚ　ㅐㅙ
+ㅝㅟ　ㅔㅞ
+</pre>
+<p>Last eight complex vowels are not recognized as a feature of Aheui but as
+ornamental symbols; so you can ignore them.</p>
+<p>Lecturing on which-symbol-stands-for-which-sound is too far from the purpose of
+this document. However, it is notable that similar-looking symbols represent
+similar sound, as all consonants can be classified into five groups:</p>
+<pre class="literal-block">
+ㄱㅋ
+ㄴㄷㅌㄹ
+ㅁㅂㅍ
+ㅅㅈㅊ
+ㅇㅎ
+</pre>
+<p>These consonants can also be placed under each letter, as well as on the top of
+the character surrounded by a vowel. The consonant on the top is called the
+&quot;initial&quot; consonant while on the bottom is the &quot;final&quot; consonant.</p>
+<pre class="literal-block">
+안흼
+</pre>
+<p>In Aheui, functions of consonants and vowels are different each other.</p>
+</div>
+<div class="section" id="aheui-specification">
+<h1>Aheui specification</h1>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This spec is incomplete and subject to change.</p>
+</div>
+<p>Typical code of Aheui is a two-dimensional space of Hangul characters, where
+each character is a command. In there cursor is moving around to execute the
+character which is under the cursor, similar to the instruction pointer of
+Funge-98.</p>
+<p>As mentioned above, consonants and vowels have different functions. While the
+consonant is the actual instruction, the vowel is to determine the cursor's
+next position. Precisely, when the cursor meets a character, it is engaged to
+the following process:</p>
+<ul class="simple">
+<li>Cursor executes the command, according to the initial consonant of the
+character. Final consonant might be used as an argument, if needed by the
+initial.</li>
+<li>Cursor moves, according to the vowel's direction.</li>
+</ul>
+<p>There is more than one storage in Aheui. Most of them stacks, and one queue.
+Also the extension feature is treated as a quasi-stack where you &quot;push&quot; the
+input packets and &quot;pop&quot; the output packets. In any of the instructions
+involving a pop or two, including duplication, if a storage has less element
+than the instruction requires, the cursor doesn't execute the instruction but
+moves according to the vowel only.</p>
+<div class="section" id="vowels-the-directions">
+<h2>Vowels: the Directions</h2>
+<p>Little rod attached to the bar indicates the direction of the cursor.</p>
+<ul class="simple">
+<li>ㅏ, ㅓ, ㅗ, and ㅜ moves cursor by one character right, left, top, bottom
+respectively.</li>
+<li>ㅑ, ㅕ, ㅛ, and ㅠ moves cursor by two characters right, left, top, bottom
+respectively.</li>
+<li>ㅡ, ㅣ, and&nbsp; ㅢ are the &quot;reflectors&quot;. The cursor moves back to where it had
+come from. While ㅢ reflects all movement of the cursor, ㅡ reflects only
+vertical movement of the cursor, as ㅣ does horizontal movement only. The
+movement which is not reflected moves in the direction it went, by the
+law of inertia.</li>
+</ul>
+</div>
+<div class="section" id="consonants-the-commands">
+<h2>Consonants: the Commands</h2>
+<p>The ㅇ group: null</p>
+<ul class="simple">
+<li>ㅇ, as it is shaped, is the <strong>null</strong> command, which does nothing. The cursor
+will immediately move as the vowel indicates.</li>
+<li>ㅎ is the <strong>terminate</strong> command. The cursor stops at the character and
+terminates the execution.</li>
+</ul>
+<p>Hence &quot;아희&quot; itself is the code, which would be a null program.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The ㄴ group: arithmatic</p>
+<ul class="simple">
+<li>ㄷ is the <strong>add</strong> command. The cursor pops two element from the current
+storage, and pushes the sum of two values.</li>
+<li>ㄸ is shaped double-ㄷ, hence the <strong>multiply</strong> command. The cursor pops two
+element from the current storage, and pushes the product of two values.</li>
+<li>ㄴ is the divide command. The cursor pops two element from the current
+storage, divide latter value by former value(latter/former), and pushes
+the result.</li>
+<li>ㅌ is the <strong>subtract</strong> command. The cursor pops two element from the current
+storage, subtract former value from latter value(latter-former), and
+pushes the result.</li>
+<li>ㄹ is the <strong>modulo</strong> command. The cursor pops two element from the current
+storage, and pushes (latter value) modulo (former value)</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The ㅁ group: storage</p>
+<ul class="simple">
+<li>ㅁ is the <strong>pop</strong> command. The cursor pops an element from the current
+storage. Final consonant can be applied by case. (See <a class="reference internal" href="#below">below</a>.)</li>
+<li>ㅂ is the <strong>push</strong> command. The cursor pushes an element to the current
+storage. The value to push is specified by the final consonant. (See
+<a class="reference internal" href="#below">below</a>.)</li>
+<li>ㅃ, double-ㅂ, is the&nbsp;<strong>duplicate</strong> command. If the current storage is a stack,
+the cursor copies the top element. If the current storage is a queue, the
+cursor copies the front element.</li>
+<li>ㅍ is the <strong>swap</strong> command. The cursor swaps two elements .</li>
+</ul>
+<p id="below">In ㅁ command, only ㅇ and ㅎ are recognized as a final consonant. With ㅇ, the
+cursor pops an element from the storage and prints it as an integer. ㅎ
+specifies the cursor prints the character corresponding the value as the
+Unicode codepoint.
+That is same as in ㅂ command, where ㅇ specifies the cursor to receives an
+integer from user input and pushes it into the storage, and ㅎ receives a
+character and pushes the Unicode code point. And other final consonant of the ㅂ
+command stands for the value to be pushed into the storage, which is specified
+by the line segments that the consonant is consist of:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>ㄱ</td>
+<td>ㄴ</td>
+<td>ㄷ</td>
+<td>ㄹ</td>
+<td>ㅁ</td>
+<td>ㅂ</td>
+<td>ㅅ</td>
+<td>ㅈ</td>
+<td>ㅊ</td>
+<td>ㅋ</td>
+<td>ㅌ</td>
+<td>ㅍ</td>
+</tr>
+<tr><td>2</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>In Korean language, these &quot;consonant clusters&quot; are also valid as placed in the
+final. They are also used in Aheui&nbsp; usefully for higher number, if you can
+remember which one is valid:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>ㄲ</td>
+<td>ㄳ</td>
+<td>ㄵ</td>
+<td>ㄶ</td>
+<td>ㄺ</td>
+<td>ㄻ</td>
+<td>ㄼ</td>
+<td>ㄽ</td>
+<td>ㄾ</td>
+<td>ㄿ</td>
+<td>ㅀ</td>
+<td>ㅄ</td>
+<td>ㅆ</td>
+</tr>
+<tr><td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>9</td>
+<td>7</td>
+<td>9</td>
+<td>9</td>
+<td>8</td>
+<td>6</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>ㅂ command with no final consonant pushes zero. There is no way to push 1
+explicitly, but it is possible by simple arithmetic, such as <cite>반반나`(2/2), `밤받타</cite>
+(4-3).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The ㅅ group: miscellaneous</p>
+<ul class="simple">
+<li>ㅅ is <strong>select</strong> command, where the cursor selects the storage. The final
+consonant specifies which storage is to be selected. (See below.)</li>
+<li>ㅆ is <strong>transfer</strong> command. The cursor pops an element from the current
+storage, and pushes it into the storage that the final consonant
+indicates.</li>
+<li>ㅈ is shaped like balance scales, and this is the <strong>compare</strong> command. The
+cursor pops two elements from the current storage. If the latter value is
+grater than or equal to the former value, the cursor pushes 1, otherwise 0.</li>
+<li>ㅊ has many forks, so it is the <strong>decide</strong> command. The cursor pops an element
+from the current storage. If the value is non-zero, the cursor moves as
+is specified by the vowel. If the value is zero, the cursor moves
+<em>opposite</em> from the vowel's direction.</li>
+</ul>
+<p>Storages you can specify with ㅅ and ㅆ commands are (none), ㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ,
+ㅇ, ㅅ, ㅈ, ㅊ, ㅋ, ㅌ, ㅍ, ㅎ, ㄲ, ㄳ, ㄵ, ㄶ, ㄺ, ㄻ, ㄼ, ㄽ, ㄾ, ㄿ, ㅀ, ㅄ, and ㅆ. All are
+stacks except ㅇ, which is the queue, and ㅎ, which is the protocol the cursor
+communicate with an extension.
+The default storage which is selected at the very beginning of the execution is
+the (none) stack.</p>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation</h2>
+<p>The code of Aheui is written in UTF-8 encoding. Only Hangul syllables (from
+U+!AC00 to U+!D7A3) are recognized as a command; others are ignored.</p>
+</div>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>This code prints &quot;Hello, world!&quot;</p>
+<pre class="literal-block">
+1. 밤밣따빠밣밟따뿌
+2. 빠맣파빨받밤뚜뭏
+3. 돋밬탕빠맣붏두붇
+4. 볻뫃박발뚷투뭏붖
+5. 뫃도뫃희멓뭏뭏붘
+6. 뫃봌토범더벌뿌뚜
+7. 뽑뽀멓멓더벓뻐뚠
+8. 뽀덩벐멓뻐덕더벅
+</pre>
+</div>
+<div class="section" id="acknowledgement">
+<h2>Acknowledgement</h2>
+<p>This document is based on the
+<a class="reference external" href="http://puzzlet.springnote.com/pages/219154.xhtml">original Specification</a>
+written by Puzzlet Chung.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
