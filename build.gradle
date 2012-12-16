@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.6
+
+ext {
+    mainClass = 'com.aha.aheui.interpreter.Main'
+}
+
+///////////////////////////////////////////////////
+// Dependencies                                  //
+///////////////////////////////////////////////////
+
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies{
+    testCompile group:'junit', name:'junit', version:'4.10'
+}
+
+///////////////////////////////////////////////////
+// Packaging                                     //
+///////////////////////////////////////////////////
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClass 
+    }
+}
+
+///////////////////////////////////////////////////
+// Eclipse                                       //
+///////////////////////////////////////////////////
+
+eclipse.project.name = 'AheuiJava'
+
+eclipse.classpath.file {
+    whenMerged { classpath ->
+        classpath.entries.findAll { entry -> entry.kind == 'lib' || entry.kind == 'con' }*.exported = false
+    }
+    // use relative paths for libraries
+    whenMerged { classpath ->
+        classpath.entries.findAll { entry -> entry.kind == 'lib' && entry.path.startsWith(project.projectDir.path) }.each {
+             e -> 
+                e.path = e.path.substring(project.projectDir.path.length() + 1)
+        }
+    }
+}
+
