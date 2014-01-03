@@ -3,6 +3,9 @@ aheui-java
 
 An interpreter for the `Aheui <http://esolangs.org/wiki/Aheui>`__ programming language written in Java.
 
+.. image:: https://travis-ci.org/arminha/aheui-java.png?branch=master
+   :target: https://travis-ci.org/arminha/aheui-java
+
 Links
 -----
 
