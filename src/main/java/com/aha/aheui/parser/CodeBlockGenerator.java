@@ -149,6 +149,7 @@ class CodeBlockGenerator {
                     case MirrorBoth:
                         columnDiff = -columnDiff;
                         lineDiff = -lineDiff;
+                        break;
                     default:
                         throw new IllegalArgumentException();
                 }
