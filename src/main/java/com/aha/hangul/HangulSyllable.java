@@ -27,7 +27,7 @@ public class HangulSyllable {
     private static final int LASTSYLLABLE = FIRST_SYLLABLE
             + (InitialJamo.values().length - 1) * INITIAL_INTERVAL
             + (MedialJamo.values().length - 1) * MEDIAL_INTERVAL 
-            + (FinalJamo.values().length - 1); 
+            + FinalJamo.values().length - 1;
     
     private final InitialJamo initialJamo;
     private final MedialJamo medialJamo;
@@ -63,11 +63,11 @@ public class HangulSyllable {
             throw new IllegalArgumentException("character is no Hangul syllable.");
         }
         int charOffset = character - FIRST_SYLLABLE;
-        int inital = charOffset / INITIAL_INTERVAL;
-        initialJamo = InitialJamo.values()[inital];
+        int initial = charOffset / INITIAL_INTERVAL;
+        initialJamo = InitialJamo.values()[initial];
         int medial = (charOffset % INITIAL_INTERVAL) / MEDIAL_INTERVAL;
         medialJamo = MedialJamo.values()[medial];
-        int last = (charOffset % MEDIAL_INTERVAL);
+        int last = charOffset % MEDIAL_INTERVAL;
         finalJamo = FinalJamo.values()[last];
     }
     
