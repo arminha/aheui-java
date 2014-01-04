@@ -1,7 +1,15 @@
-/bin/
+
+# Gradle
 /build/
 /.gradle/
+
+# Eclipse
 /.project
 /.classpath
 /.settings/
-/bin
+/bin/
+
+# IDEA
+/aheui-java.iml
+/.idea/
+/out/
