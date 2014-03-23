@@ -6,6 +6,7 @@
 # Eclipse
 /.project
 /.classpath
+/.checkstyle
 /.settings/
 /bin/
 

@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
 
@@ -44,6 +45,11 @@ tasks.withType(FindBugs) {
 
 pmd {
     toolVersion = '5.0.5'
+}
+
+checkstyle {
+    ignoreFailures = true
+    toolVersion = '5.7'
 }
 
 ///////////////////////////////////////////////////////
