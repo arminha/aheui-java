@@ -48,6 +48,7 @@ tasks.withType(FindBugs) {
 }
 
 pmd {
+    ignoreFailures = true
     toolVersion = '5.0.5'
 }
 
