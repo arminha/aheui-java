@@ -25,7 +25,11 @@ dependencies{
 
 jar {
     manifest {
-        attributes 'Main-Class': mainClass 
+        attributes 'Main-Class': mainClass
+        def buildTag = System.getenv()['BUILD_TAG']
+        if (buildTag != null && !buildTag.isEmpty()) {
+            attributes 'Build-Tag': buildTag
+        }
     }
 }
 
