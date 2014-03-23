@@ -23,12 +23,7 @@ import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.hangul.FinalJamo;
 import com.aha.util.Method;
 
-/**
- *
- * @author armin
- */
-class ParseParameters extends AbstractVisitor<Instruction> implements
-        Method<Instruction> {
+class ParseParameters extends AbstractVisitor<Instruction> implements Method<Instruction> {
 
     private ErrorLevel invalidParameters = ErrorLevel.Ignore;
 
@@ -47,8 +42,7 @@ class ParseParameters extends AbstractVisitor<Instruction> implements
 
     @Override
     public Instruction visit(Instruction instruction) {
-        if (instruction.getOperation().hasParameters()
-                || instruction.getOperation() == Operation.Pop) {
+        if (instruction.getOperation().hasParameters() || instruction.getOperation() == Operation.Pop) {
             return super.visit(instruction);
         }
         return instruction;
@@ -143,7 +137,7 @@ class ParseParameters extends AbstractVisitor<Instruction> implements
         instruction.setStorage(storage);
         return instruction;
     }
-    
+
     private static Storage convertToStorage(FinalJamo jamo) {
         return Storage.values()[jamo.ordinal()];
     }

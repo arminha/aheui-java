@@ -26,7 +26,10 @@ import com.aha.util.Matrix;
 import com.aha.util.Tuple;
 import com.aha.util.streams.StreamHelper;
 
-public class Main {
+public final class Main {
+
+    private Main() {
+    }
 
     /**
      * @param args
@@ -36,7 +39,7 @@ public class Main {
             printUsage();
             System.exit(-1);
         }
-        
+
         String source = null;
         try {
             FileInputStream fIn = new FileInputStream(args[0]);
@@ -46,10 +49,10 @@ public class Main {
             e.printStackTrace();
             System.exit(-1);
         }
-        
+
         AheuiParser parser = new AheuiParser();
         Tuple<Matrix<Instruction>, Program> result = parser.parse(source);
-        
+
         Program program = result.getSecond();
         AheuiInterpreter interpreter = new AheuiInterpreter();
         interpreter.run(program);
@@ -57,7 +60,6 @@ public class Main {
 
     private static void printUsage() {
         // TODO Auto-generated method stub
-        
     }
 
 }

@@ -77,12 +77,10 @@ public class Instruction {
     public int getColumn() {
         return column;
     }
-    
+
     @Override
     public String toString() {
-        return String.format(
-                        "%c: operation = %s, direction = %s, storage = %s, number = %d",
-                        getSyllable().character(), getOperation(),
-                        getDirectionModifier(), getStorage(), getNumber());
+        return String.format("%c: operation = %s, direction = %s, storage = %s, number = %d",
+                getSyllable().character(), getOperation(), getDirectionModifier(), getStorage(), getNumber());
     }
 }

@@ -24,8 +24,7 @@ public abstract class AbstractVisitor<T> implements Visitor<T> {
     @Override
     public T visit(Instruction instruction) {
         if (instruction.getOperation() == null) {
-            throw new IllegalArgumentException(
-                    "operation is not set for the instruction.");
+            throw new IllegalArgumentException("operation is not set for the instruction.");
         }
         switch (instruction.getOperation()) {
         case Add:
@@ -167,12 +166,12 @@ public abstract class AbstractVisitor<T> implements Visitor<T> {
     public T visitTransfer(Instruction instruction) {
         return visitDefault(instruction);
     }
-    
+
     @Override
     public T visitInvalidOperation(Instruction instruction) {
         return visitDefault(instruction);
     }
-    
+
     protected T visitDefault(Instruction instruction) {
         throw new NotImplementedException();
     }

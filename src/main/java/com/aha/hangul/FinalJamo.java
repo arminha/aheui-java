@@ -17,10 +17,12 @@
 package com.aha.hangul;
 
 /**
- * Represents the final Jamo in a Hangul syllable
+ * Represents the final Jamo in a Hangul syllable.
+ * 
  * @see HangulSyllable
  */
 public enum FinalJamo implements Jamo {
+    //CHECKSTYLE IGNORE JavadocStyle
     /** No final Jamo */
     None,
     /** ㄱ */
@@ -77,7 +79,8 @@ public enum FinalJamo implements Jamo {
     Pieup('ㅍ'),
     /** ㅎ */
     Hieut('ㅎ');
-    
+    //CHECKSTYLE END IGNORE JavadocStyle
+
     private char character;
 
     private FinalJamo() {
@@ -89,7 +92,8 @@ public enum FinalJamo implements Jamo {
     }
 
     /**
-     * Returns the char value of this Jamo
+     * Returns the char value of this Jamo.
+     * 
      * @return a char representation of the Jamo
      */
     @Override

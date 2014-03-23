@@ -32,8 +32,7 @@ public class Matrix<T> {
             return null;
         } else {
             while (rowInd >= rows.size()) {
-                List<T> newRow = initialRowLength == null ? new ArrayList<T>()
-                        : new ArrayList<T>(initialRowLength);
+                List<T> newRow = initialRowLength == null ? new ArrayList<T>() : new ArrayList<T>(initialRowLength);
                 rows.add(newRow);
             }
             return rows.get(rowInd);
@@ -52,10 +51,12 @@ public class Matrix<T> {
 
     public T get(int rowInd, int columnInd) {
         List<T> row = getRow(rowInd, false);
-        if (row == null)
+        if (row == null) {
             return null;
-        if (columnInd >= row.size())
+        }
+        if (columnInd >= row.size()) {
             return null;
+        }
         return row.get(columnInd);
     }
 
@@ -64,8 +65,9 @@ public class Matrix<T> {
         while (columnInd >= row.size()) {
             row.add(null);
         }
-        if (row.size() > rowLength)
+        if (row.size() > rowLength) {
             rowLength = row.size();
+        }
         row.set(columnInd, value);
     }
 
@@ -89,7 +91,7 @@ public class Matrix<T> {
         }
         return result;
     }
-    
+
     public void apply(Method<T> method) {
         for (List<T> tRow : rows) {
             for (T item : tRow) {

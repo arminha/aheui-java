@@ -23,7 +23,7 @@ import com.aha.util.Method;
 class ParseDirection implements Method<Instruction> {
 
     private ErrorLevel invalidDirection = ErrorLevel.Ignore;
-    
+
     @Override
     public void apply(Instruction instruction) {
         switch (instruction.getSyllable().getMedialJamo()) {

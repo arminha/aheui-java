@@ -35,17 +35,17 @@ import org.junit.Test;
 
 public class HangulUtilsTest {
 
-    public final static String fibbonacciExample = "살뷸바우박우뭏뻐설멍뻐선썬퍼\n"
+    public static final String FIBBONACCI_EXAMPLE = "살뷸바우박우뭏뻐설멍뻐선썬퍼\n"
             + "삭방손삳볻타삭뿌박투빠쑨싿솓\n" + "도벌후멓설멍섣차볻타솓산도해\n";
 
-    public final static String helloWorldExample = "밤밣따빠밣밟따뿌\n" + "빠맣파빨받밤뚜뭏\n"
+    public static final String HELLO_WORLD_EXAMPLE = "밤밣따빠밣밟따뿌\n" + "빠맣파빨받밤뚜뭏\n"
             + "돋밬탕빠맣붏두붇\n" + "볻뫃박발뚷투뭏붖\n" + "뫃도뫃희멓뭏뭏붘\n" + "뫃봌토범더벌뿌뚜\n"
             + "뽑뽀멓멓더벓뻐뚠\n" + "뽀덩벐멓뻐덕더벅\n";
 
     @Test
     public void testHello() throws Exception {
         AheuiParser parser = new AheuiParser();
-        Tuple<Matrix<Instruction>, Program> result = parser.parse(helloWorldExample);
+        Tuple<Matrix<Instruction>, Program> result = parser.parse(HELLO_WORLD_EXAMPLE);
 
         Program program = result.getSecond();
         AheuiInterpreter interpreter = new AheuiInterpreter();
@@ -68,7 +68,7 @@ public class HangulUtilsTest {
         out.println(HangulSyllable.isHangulSyllable(po.character()));
 
         AheuiParser parser = new AheuiParser();
-        Tuple<Matrix<Instruction>, Program> result = parser.parse(fibbonacciExample);
+        Tuple<Matrix<Instruction>, Program> result = parser.parse(FIBBONACCI_EXAMPLE);
         Matrix<Instruction> instructions = result.getFirst();
         for (int j = 0; j < instructions.getRows(); j++) {
             out.println("Line " + j + ":");

@@ -26,8 +26,7 @@ public class InputStreamInput implements ProgramInput {
 
     private InputStream in;
     private PrintStream err;
-    
-        
+
     public InputStreamInput(InputStream in, PrintStream err) {
         this.in = in;
         this.err = err;
@@ -52,15 +51,11 @@ public class InputStreamInput implements ProgramInput {
 
     @Override
     public int readInteger() {
-        return readInt(in, err);
-    }
-    
-    private int readInt(InputStream in, PrintStream err) {
         // TODO better exception management
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
             String line;
-        
+
             line = reader.readLine();
             boolean done = false;
             int value = 0;

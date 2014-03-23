@@ -37,12 +37,12 @@ public class AheuiInterpreter {
     private PrintStream out;
     private PrintStream err;
     private ProgramInput input;
-    
+
     private boolean alternateNext;
-    
+
     protected void init() {
         storages = new ArrayList<Deque<Integer>>(Storage.values().length - 1);
-        for (int i = 0; i < Storage.values().length -1; i++) {
+        for (int i = 0; i < Storage.values().length - 1; i++) {
             storages.add(new ArrayDeque<Integer>());
         }
         currentStorage = Storage.DefaultStack;
@@ -54,11 +54,11 @@ public class AheuiInterpreter {
             e.printStackTrace();
         }
     }
-    
+
     public void run(Program codeBlocks) {
         init();
-        
-        Executer executer = new Executer();
+
+        Executor executer = new Executor();
         CodeBlock codeBlock = codeBlocks.getStartBlock();
         boolean done = false;
         while (!done) {
@@ -78,25 +78,25 @@ public class AheuiInterpreter {
             }
         }
     }
-    
+
     protected int getValue() {
         if (currentStorage == Storage.Extension) {
             throw new NotImplementedException("No extension available");
         }
         return storages.get(currentStorage.ordinal()).removeFirst();
     }
-    
+
     protected int peekValue() {
         if (currentStorage == Storage.Extension) {
             throw new NotImplementedException("No extension available");
         }
         return storages.get(currentStorage.ordinal()).peekFirst();
     }
-    
+
     protected void setValue(int value) {
         setValue(currentStorage, value);
     }
-    
+
     protected void setValue(Storage storage, int value) {
         if (storage == Storage.Extension) {
             throw new NotImplementedException("No extension available");
@@ -108,8 +108,8 @@ public class AheuiInterpreter {
             deque.addFirst(value);
         }
     }
-    
-    private class Executer extends AbstractVisitor<Boolean> {
+
+    private class Executor extends AbstractVisitor<Boolean> {
         @Override
         public Boolean visitAdd(Instruction instruction) {
             setValue(getValue() + getValue());
@@ -197,7 +197,7 @@ public class AheuiInterpreter {
         @Override
         public Boolean visitReadCharacter(Instruction instruction) {
             char c = input.readCharacter();
-            setValue((int)c);
+            setValue((int) c);
             return true;
         }
 

@@ -138,20 +138,20 @@ class CodeBlockGenerator {
                 columnDiff = instruction.getColumn() - previousInstruction.getColumn();
                 lineDiff = instruction.getLine() - previousInstruction.getLine();
                 switch (instruction.getDirectionModifier()) {
-                    case None:
-                        break;
-                    case MirrorHorizontal:
-                        columnDiff = -columnDiff;
-                        break;
-                    case MirrorVertical:
-                        lineDiff = -lineDiff;
-                        break;
-                    case MirrorBoth:
-                        columnDiff = -columnDiff;
-                        lineDiff = -lineDiff;
-                        break;
-                    default:
-                        throw new IllegalArgumentException();
+                case None:
+                    break;
+                case MirrorHorizontal:
+                    columnDiff = -columnDiff;
+                    break;
+                case MirrorVertical:
+                    lineDiff = -lineDiff;
+                    break;
+                case MirrorBoth:
+                    columnDiff = -columnDiff;
+                    lineDiff = -lineDiff;
+                    break;
+                default:
+                    throw new IllegalArgumentException();
                 }
             }
 
@@ -163,10 +163,10 @@ class CodeBlockGenerator {
                 }
             }
 
-            Instruction next = instructions.get(instruction.getLine() + lineDiff,
-                    instruction.getColumn() + columnDiff);
+            Instruction next = instructions.get(instruction.getLine() + lineDiff, instruction.getColumn() + columnDiff);
             if (next == null) {
-                ErrorUtil.error(instruction, reachableUndefinedInstruction, "instruction points to undefined instruction outside of the code matrix.");
+                ErrorUtil.error(instruction, reachableUndefinedInstruction,
+                        "instruction points to undefined instruction outside of the code matrix.");
                 throw new NotImplementedException();
             }
             return next;

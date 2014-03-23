@@ -17,6 +17,7 @@
 package com.aha.aheui.ast;
 
 public enum Storage {
+    //CHECKSTYLE IGNORE JavadocStyle
     DefaultStack,
     /** ㄱ */
     GiyeokStack,
@@ -72,6 +73,7 @@ public enum Storage {
     PieupStack,
     /** ㅎ */
     Extension(StorageType.Extension);
+    //CHECKSTYLE END IGNORE JavadocStyle
 
     private final StorageType type;
 

@@ -21,7 +21,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class StreamHelper {
+public final class StreamHelper {
+
+    private StreamHelper() {
+    }
 
     private static final int BOM_MARKER = 65279;
 
@@ -31,7 +34,7 @@ public class StreamHelper {
         String line = reader.readLine();
         // filter unicode BOM markers
         // see http://groups.google.com/group/comp.lang.java.programmer/browse_frm/thread/020adb9d6ad25412
-        int firstChar = (int)line.charAt(0);
+        int firstChar = (int) line.charAt(0);
         if (firstChar == BOM_MARKER) {
             line = line.substring(1);
         }
@@ -42,5 +45,5 @@ public class StreamHelper {
         }
         return result.toString();
     }
-    
+
 }

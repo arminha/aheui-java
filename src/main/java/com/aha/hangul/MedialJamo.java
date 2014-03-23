@@ -17,10 +17,12 @@
 package com.aha.hangul;
 
 /**
- * Represents the medial Jamo in a Hangul syllable
+ * Represents the medial Jamo in a Hangul syllable.
+ * 
  * @see HangulSyllable
  */
 public enum MedialJamo implements Jamo {
+    //CHECKSTYLE IGNORE JavadocStyle
     /** ㅏ */
     A('ㅏ'),
     /** ㅐ */
@@ -63,6 +65,7 @@ public enum MedialJamo implements Jamo {
     Ui('ㅢ'),
     /** ㅣ */
     I('ㅣ');
+    //CHECKSTYLE END IGNORE JavadocStyle
 
     private char character;
 
@@ -71,7 +74,8 @@ public enum MedialJamo implements Jamo {
     }
 
     /**
-     * Returns the char value of this Jamo
+     * Returns the char value of this Jamo.
+     * 
      * @return a char representation of the Jamo
      */
     @Override

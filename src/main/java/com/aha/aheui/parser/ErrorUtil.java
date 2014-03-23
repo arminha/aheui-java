@@ -18,7 +18,10 @@ package com.aha.aheui.parser;
 
 import com.aha.aheui.ast.Instruction;
 
-class ErrorUtil {
+final class ErrorUtil {
+
+    private ErrorUtil() {
+    }
 
     public static void error(int line, int column, ErrorLevel errorLevel, String message) {
         switch (errorLevel) {
@@ -34,9 +37,9 @@ class ErrorUtil {
             throw new IllegalArgumentException("errorLevel");
         }
     }
-    
+
     public static void error(Instruction instruction, ErrorLevel errorLevel, String message) {
         error(instruction.getLine(), instruction.getColumn(), errorLevel, message);
     }
-    
+
 }

@@ -17,6 +17,7 @@
 package com.aha.aheui.ast;
 
 public enum Operation {
+    //CHECKSTYLE IGNORE JavadocStyle
     /** ㅇ */
     Null,
     /** ㅎ */
@@ -57,7 +58,8 @@ public enum Operation {
     Decide,
     /** ㄱ, ㄲ, ㅉ or ㅋ */
     InvalidOperation;
-    
+    //CHECKSTYLE END IGNORE JavadocStyle
+
     private final boolean hasParameters;
 
     private Operation() {

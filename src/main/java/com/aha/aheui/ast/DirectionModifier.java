@@ -29,11 +29,11 @@ public enum DirectionModifier {
     MirrorHorizontal,
     MirrorVertical,
     MirrorBoth;
-    
+
     private final boolean isFixed;
     private final int lineDiff;
     private final int columnDiff;
-    
+
     private DirectionModifier(int lineDiff, int columnDiff) {
         isFixed = true;
         assert lineDiff == 0 || columnDiff == 0;
@@ -50,11 +50,11 @@ public enum DirectionModifier {
     public boolean isFixed() {
         return isFixed;
     }
-    
+
     public int getLineDiff() {
         return lineDiff;
     }
-    
+
     public int getColumnDiff() {
         return columnDiff;
     }

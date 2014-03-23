@@ -31,8 +31,8 @@ public class AheuiParser {
         CodeBlockGenerator blockGenerator = new CodeBlockGenerator();
         Program program = blockGenerator.createProgram(instructionTable);
         program.mergeBlocks();
-        
+
         return new Tuple<Matrix<Instruction>, Program>(instructionTable, program);
     }
-    
+
 }

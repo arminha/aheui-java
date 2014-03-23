@@ -34,12 +34,10 @@ public class CodeBlock {
         previousDirectionModifier = null;
     }
 
-    public CodeBlock(Instruction firstInstruction,
-            Instruction previousInstruction) {
+    public CodeBlock(Instruction firstInstruction, Instruction previousInstruction) {
         instructions = new ArrayList<Instruction>();
         instructions.add(firstInstruction);
-        previousDirectionModifier = computePreviousDirectionModifier(
-                firstInstruction, previousInstruction);
+        previousDirectionModifier = computePreviousDirectionModifier(firstInstruction, previousInstruction);
     }
 
     public DirectionModifier getPreviousDirectionModifier() {
@@ -79,9 +77,9 @@ public class CodeBlock {
         Instruction first = instructions.get(0);
         return getNameInternal(first, previousDirectionModifier);
     }
-    
-    private static DirectionModifier computePreviousDirectionModifier(
-            Instruction instruction, Instruction previousInstruction) {
+
+    private static DirectionModifier computePreviousDirectionModifier(Instruction instruction,
+            Instruction previousInstruction) {
         int lineDiff = instruction.getLine() - previousInstruction.getLine();
         int columnDiff = instruction.getColumn() - previousInstruction.getColumn();
         DirectionModifier modifier;
@@ -134,7 +132,7 @@ public class CodeBlock {
         }
         return sb.toString();
     }
-    
+
     static String getUniqueName(Instruction instruction, Instruction previousInstruction) {
         if (previousInstruction != null) {
             return getNameInternal(instruction, computePreviousDirectionModifier(instruction, previousInstruction));

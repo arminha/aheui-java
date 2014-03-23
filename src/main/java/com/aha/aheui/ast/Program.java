@@ -29,35 +29,35 @@ public class Program {
     private final Map<String, CodeBlock> codeBlocks = new HashMap<String, CodeBlock>();
     private final Map<String, List<CodeBlock>> inverseReferences = new HashMap<String, List<CodeBlock>>();
     private CodeBlock startBlock;
-    
+
     public CodeBlock get(Instruction instruction, Instruction previousInstruction) {
         String name = CodeBlock.getUniqueName(instruction, previousInstruction);
         return codeBlocks.get(name);
     }
-    
+
     public CodeBlock get(Instruction instruction) {
         return get(instruction, null);
     }
-    
+
     public void add(CodeBlock codeBlock) {
         if (codeBlocks.containsKey(codeBlock.getUniqueName())) {
             throw new IllegalArgumentException("Codeblock already registered.");
         }
         codeBlocks.put(codeBlock.getUniqueName(), codeBlock);
     }
-    
+
     public Collection<CodeBlock> getCodeBlocks() {
         return Collections.unmodifiableCollection(codeBlocks.values());
     }
-    
+
     public CodeBlock getStartBlock() {
         return startBlock;
     }
-    
+
     public void setStartBlock(CodeBlock startBlock) {
         this.startBlock = startBlock;
     }
-    
+
     private void computeReferences() {
         inverseReferences.clear();
         for (CodeBlock codeBlock : codeBlocks.values()) {
@@ -72,16 +72,16 @@ public class Program {
             }
         }
     }
-    
+
     public void mergeBlocks() {
         computeReferences();
-        
+
         CodeBlock codeBlock = nextMergable();
         while (codeBlock != null) {
             CodeBlock next = codeBlock.getNext();
             codeBlocks.remove(next.getUniqueName());
             inverseReferences.remove(next.getUniqueName());
-            
+
             // update inverse references
             if (next.getNext() != null) {
                 List<CodeBlock> refs = inverseReferences.get(next.getNext().getUniqueName());
@@ -95,17 +95,16 @@ public class Program {
             }
             // merge
             codeBlock.mergeWithNext();
-            
+
             codeBlock = nextMergable();
         }
     }
-    
+
     private CodeBlock nextMergable() {
         Iterator<Map.Entry<String, List<CodeBlock>>> refIt = inverseReferences.entrySet().iterator();
         while (refIt.hasNext()) {
             Map.Entry<String, List<CodeBlock>> entry = refIt.next();
-            if (!entry.getKey().equals(startBlock.getUniqueName())
-                    && entry.getValue().size() == 1) {
+            if (!entry.getKey().equals(startBlock.getUniqueName()) && entry.getValue().size() == 1) {
                 CodeBlock codeBlock = entry.getValue().get(0);
                 if (codeBlock.getAlternativeNext() == null) {
                     return codeBlock;

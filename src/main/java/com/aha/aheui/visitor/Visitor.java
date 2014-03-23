@@ -59,7 +59,7 @@ public interface Visitor<T> {
     T visitCompare(Instruction instruction);
 
     T visitDecide(Instruction instruction);
-    
+
     T visitInvalidOperation(Instruction instruction);
 
 }

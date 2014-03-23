@@ -29,8 +29,9 @@ class Lexer {
 
     /**
      * 
-     *
-     * @param program the string representation of the Aheui program
+     * 
+     * @param program
+     *            the string representation of the Aheui program
      * @return a Matrix containing the instructions of the program
      */
     public Matrix<Instruction> getInstructions(String program) {
@@ -50,9 +51,7 @@ class Lexer {
                     for (int i = 0; i < line.length(); i++) {
                         char c = line.charAt(i);
                         if (HangulSyllable.isHangulSyllable(c)) {
-                            Instruction instruction = new Instruction(
-                                    new HangulSyllable(c), lineNum,
-                                    syllableCount);
+                            Instruction instruction = new Instruction(new HangulSyllable(c), lineNum, syllableCount);
                             setOperation(instruction);
                             result.set(lineNum, syllableCount, instruction);
                             syllableCount++;

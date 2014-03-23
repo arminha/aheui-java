@@ -22,7 +22,7 @@ public class ParseException extends RuntimeException {
 
     private int line;
     private int column;
-    
+
     public ParseException(int line, int column) {
         this.line = line;
         this.column = column;

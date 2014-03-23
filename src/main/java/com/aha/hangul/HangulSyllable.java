@@ -17,8 +17,7 @@
 package com.aha.hangul;
 
 /**
- * A Hangul syllable. Contains methods for composing and decomposing of
- * Hangul syllables from/into Jamos
+ * A Hangul syllable. Contains methods for composing and decomposing of Hangul syllables from/into Jamos.
  */
 public class HangulSyllable {
     private static final int FIRST_SYLLABLE = 44032;
@@ -26,36 +25,38 @@ public class HangulSyllable {
     private static final int MEDIAL_INTERVAL = 28;
     private static final int LASTSYLLABLE = FIRST_SYLLABLE
             + (InitialJamo.values().length - 1) * INITIAL_INTERVAL
-            + (MedialJamo.values().length - 1) * MEDIAL_INTERVAL 
+            + (MedialJamo.values().length - 1) * MEDIAL_INTERVAL
             + FinalJamo.values().length - 1;
-    
+
     private final InitialJamo initialJamo;
     private final MedialJamo medialJamo;
     private final FinalJamo finalJamo;
-    
+
     /**
-     * Returns true if the given character is a Hangul syllable
-     * @param character a char value
+     * Returns true if the given character is a Hangul syllable.
+     * 
+     * @param character
+     *            a char value
      * @return true if the given character is a Hangul syllable
      */
     public static boolean isHangulSyllable(char character) {
         return FIRST_SYLLABLE <= character && LASTSYLLABLE >= character;
     }
-    
+
     /**
-     *
+     * 
      * @param initialJamo
      * @param medialJamo
      * @param finalJamo
      */
-    public HangulSyllable(InitialJamo initialJamo, MedialJamo medialJamo,
-            FinalJamo finalJamo) {
+    public HangulSyllable(InitialJamo initialJamo, MedialJamo medialJamo, FinalJamo finalJamo) {
         this.initialJamo = initialJamo;
         this.medialJamo = medialJamo;
         this.finalJamo = finalJamo;
     }
+
     /**
-     *
+     * 
      * @param character
      */
     public HangulSyllable(char character) {
@@ -70,9 +71,10 @@ public class HangulSyllable {
         int last = charOffset % MEDIAL_INTERVAL;
         finalJamo = FinalJamo.values()[last];
     }
-    
+
     /**
-     * Returns the initial Jamo of this Hangul syllable
+     * Returns the initial Jamo of this Hangul syllable.
+     * 
      * @return the initial Jamo of this Hangul syllable
      */
     public InitialJamo getInitialJamo() {
@@ -80,7 +82,8 @@ public class HangulSyllable {
     }
 
     /**
-     * Returns the medial Jamo of this Hangul syllable
+     * Returns the medial Jamo of this Hangul syllable.
+     * 
      * @return the medial Jamo of this Hangul syllable
      */
     public MedialJamo getMedialJamo() {
@@ -88,15 +91,17 @@ public class HangulSyllable {
     }
 
     /**
-     * Returns the final Jamo of this Hangul syllable
+     * Returns the final Jamo of this Hangul syllable.
+     * 
      * @return the final Jamo of this Hangul syllable
      */
     public FinalJamo getFinalJamo() {
         return finalJamo;
     }
-    
+
     /**
-     * Returns a character representation of this Hangul syllable
+     * Returns a character representation of this Hangul syllable.
+     * 
      * @return a character representation of this Hangul syllable
      */
     public char character() {
