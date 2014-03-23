@@ -37,13 +37,16 @@ jar {
 // Code Quality
 
 findbugs {
-    toolVersion = '2.0.1'
+    ignoreFailures = true
+    toolVersion = '2.0.3'
 }
 
-tasks.withType(FindBugs) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
+if (!rootProject.hasProperty("findbugsReportXml") || findbugsReportXml != 'true') {
+    tasks.withType(FindBugs) {
+        reports {
+            xml.enabled = false
+            html.enabled = true
+        }
     }
 }
 
