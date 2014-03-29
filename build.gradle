@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'pmd'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.6
 
@@ -59,6 +60,14 @@ checkstyle {
     ignoreFailures = true
     toolVersion = '5.7'
 }
+
+///////////////////////////////////////////////////////
+// jacoco
+
+jacoco {
+    toolVersion = '0.7.0.201403182114'
+}
+jacocoTestReport.dependsOn(test)
 
 ///////////////////////////////////////////////////////
 // Wrapper
