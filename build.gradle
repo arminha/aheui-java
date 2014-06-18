@@ -1,8 +1,6 @@
 apply plugin: 'java'
-apply plugin: 'checkstyle'
-apply plugin: 'findbugs'
-apply plugin: 'pmd'
 apply plugin: 'jacoco'
+apply from:   'gradle/codequality.gradle'
 
 sourceCompatibility = 1.6
 
@@ -32,33 +30,6 @@ jar {
             attributes 'Build-Tag': buildTag
         }
     }
-}
-
-///////////////////////////////////////////////////////
-// Code Quality
-
-findbugs {
-    ignoreFailures = true
-    toolVersion = '2.0.3'
-}
-
-if (!rootProject.hasProperty("findbugsReportXml") || findbugsReportXml != 'true') {
-    tasks.withType(FindBugs) {
-        reports {
-            xml.enabled = false
-            html.enabled = true
-        }
-    }
-}
-
-pmd {
-    ignoreFailures = true
-    toolVersion = '5.0.5'
-}
-
-checkstyle {
-    ignoreFailures = true
-    toolVersion = '5.7'
 }
 
 ///////////////////////////////////////////////////////
