@@ -8,6 +8,10 @@ ext {
     mainClass = 'com.aha.aheui.interpreter.Main'
 }
 
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+
 ///////////////////////////////////////////////////
 // Dependencies
 
