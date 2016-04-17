@@ -24,7 +24,7 @@ if (!rootProject.hasProperty("findbugsReportXml") || findbugsReportXml != 'true'
 
 pmd {
     ignoreFailures = true
-    toolVersion = '5.0.5'
+    toolVersion = '5.4.1'
 }
 
 /////////////////
