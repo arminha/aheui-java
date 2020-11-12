@@ -6,7 +6,6 @@ An interpreter for the [Aheui](http://esolangs.org/wiki/Aheui) programming langu
 
 ## Links
 
-* [Aheui Specification](http://puzzlet.org/personal/wiki.php/%EC%95%84%ED%9D%AC~Specification>)
-* A [Number to Aheui translator](http://dev.tokigun.net/esolang/aheui/number2aheui.py>)
+* [Aheui Specification](https://aheui.readthedocs.io/ko/latest/specs.en.html)
 * [Interpreter in JavaScript](http://puzzlet.org/doc/aheui/jsaheui_en.html)
 * [More interpreters](https://github.com/aheui)
