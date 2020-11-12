@@ -2,7 +2,7 @@
 
 An interpreter for the [Aheui](http://esolangs.org/wiki/Aheui) programming language written in Java.
 
-[![Build Status](https://travis-ci.org/arminha/aheui-java.svg?branch=master)](https://travis-ci.org/arminha/aheui-java)
+[![Build Status](https://github.com/arminha/aheui-java/workflows/build/badge.svg)](https://github.com/arminha/aheui-java/actions?query=workflow%3Abuild)
 
 ## Links
 

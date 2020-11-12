@@ -1,8 +1,0 @@
-language: java
-jdk:
-  - openjdk7
-
-env:
-  - TERM=dumb
-
-sudo: false
