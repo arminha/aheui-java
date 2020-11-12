@@ -29,13 +29,13 @@ public class CodeBlock {
     private CodeBlock alternativeNext;
 
     public CodeBlock(Instruction firstInstruction) {
-        instructions = new ArrayList<Instruction>();
+        instructions = new ArrayList<>();
         instructions.add(firstInstruction);
         previousDirectionModifier = null;
     }
 
     public CodeBlock(Instruction firstInstruction, Instruction previousInstruction) {
-        instructions = new ArrayList<Instruction>();
+        instructions = new ArrayList<>();
         instructions.add(firstInstruction);
         previousDirectionModifier = computePreviousDirectionModifier(firstInstruction, previousInstruction);
     }

@@ -36,7 +36,7 @@ class Lexer {
      */
     public Matrix<Instruction> getInstructions(String program) {
         BufferedReader reader = new BufferedReader(new StringReader(program));
-        Matrix<Instruction> result = new Matrix<Instruction>();
+        Matrix<Instruction> result = new Matrix<>();
         int lineNum = 0;
         try {
             String line;

@@ -34,7 +34,7 @@ public final class StreamHelper {
         String line = reader.readLine();
         // filter unicode BOM markers
         // see http://groups.google.com/group/comp.lang.java.programmer/browse_frm/thread/020adb9d6ad25412
-        int firstChar = (int) line.charAt(0);
+        int firstChar = line.charAt(0);
         if (firstChar == BOM_MARKER) {
             line = line.substring(1);
         }

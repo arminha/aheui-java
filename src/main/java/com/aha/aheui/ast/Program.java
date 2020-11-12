@@ -20,14 +20,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public class Program {
 
-    private final Map<String, CodeBlock> codeBlocks = new HashMap<String, CodeBlock>();
-    private final Map<String, List<CodeBlock>> inverseReferences = new HashMap<String, List<CodeBlock>>();
+    private final Map<String, CodeBlock> codeBlocks = new HashMap<>();
+    private final Map<String, List<CodeBlock>> inverseReferences = new HashMap<>();
     private CodeBlock startBlock;
 
     public CodeBlock get(Instruction instruction, Instruction previousInstruction) {
@@ -61,7 +60,7 @@ public class Program {
     private void computeReferences() {
         inverseReferences.clear();
         for (CodeBlock codeBlock : codeBlocks.values()) {
-            inverseReferences.put(codeBlock.getUniqueName(), new ArrayList<CodeBlock>());
+            inverseReferences.put(codeBlock.getUniqueName(), new ArrayList<>());
         }
         for (CodeBlock codeBlock : codeBlocks.values()) {
             if (codeBlock.getNext() != null) {
@@ -101,9 +100,7 @@ public class Program {
     }
 
     private CodeBlock nextMergable() {
-        Iterator<Map.Entry<String, List<CodeBlock>>> refIt = inverseReferences.entrySet().iterator();
-        while (refIt.hasNext()) {
-            Map.Entry<String, List<CodeBlock>> entry = refIt.next();
+        for (Map.Entry<String, List<CodeBlock>> entry : inverseReferences.entrySet()) {
             if (!entry.getKey().equals(startBlock.getUniqueName()) && entry.getValue().size() == 1) {
                 CodeBlock codeBlock = entry.getValue().get(0);
                 if (codeBlock.getAlternativeNext() == null) {

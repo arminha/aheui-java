@@ -21,11 +21,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 
 public class InputStreamInput implements ProgramInput {
 
-    private InputStream in;
-    private PrintStream err;
+    private final InputStream in;
+    private final PrintStream err;
 
     public InputStreamInput(InputStream in, PrintStream err) {
         this.in = in;
@@ -35,7 +36,7 @@ public class InputStreamInput implements ProgramInput {
     @Override
     public char readCharacter() {
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
             String line;
 
             line = reader.readLine();
@@ -53,7 +54,7 @@ public class InputStreamInput implements ProgramInput {
     public int readInteger() {
         // TODO better exception management
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
             String line;
 
             line = reader.readLine();

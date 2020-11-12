@@ -20,8 +20,8 @@ public class ParseException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    private int line;
-    private int column;
+    private final int line;
+    private final int column;
 
     public ParseException(int line, int column) {
         this.line = line;

@@ -21,9 +21,10 @@ import com.aha.aheui.ast.Operation;
 import com.aha.aheui.ast.Storage;
 import com.aha.aheui.visitor.AbstractVisitor;
 import com.aha.hangul.FinalJamo;
-import com.aha.util.Method;
 
-class ParseParameters extends AbstractVisitor<Instruction> implements Method<Instruction> {
+import java.util.function.Consumer;
+
+class ParseParameters extends AbstractVisitor<Instruction> implements Consumer<Instruction> {
 
     private ErrorLevel invalidParameters = ErrorLevel.Ignore;
 
@@ -36,7 +37,7 @@ class ParseParameters extends AbstractVisitor<Instruction> implements Method<Ins
     }
 
     @Override
-    public void apply(Instruction instruction) {
+    public void accept(Instruction instruction) {
         visit(instruction);
     }
 

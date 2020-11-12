@@ -24,9 +24,9 @@ public class Instruction {
     private DirectionModifier directionModifier;
     private Integer number;
     private Storage storage;
-    private HangulSyllable syllable;
-    private int line;
-    private int column;
+    private final HangulSyllable syllable;
+    private final int line;
+    private final int column;
 
     public Instruction(HangulSyllable syllable, int line, int column) {
         this.syllable = syllable;

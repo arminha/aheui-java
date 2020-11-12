@@ -18,6 +18,8 @@ package com.aha.util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Matrix<T> {
 
@@ -25,14 +27,14 @@ public class Matrix<T> {
 
     private int rowLength;
 
-    private List<List<T>> rows;
+    private final List<List<T>> rows;
 
     private List<T> getRow(int rowInd, boolean createNew) {
         if (!createNew && rowInd >= rows.size()) {
             return null;
         } else {
             while (rowInd >= rows.size()) {
-                List<T> newRow = initialRowLength == null ? new ArrayList<T>() : new ArrayList<T>(initialRowLength);
+                List<T> newRow = initialRowLength == null ? new ArrayList<>() : new ArrayList<>(initialRowLength);
                 rows.add(newRow);
             }
             return rows.get(rowInd);
@@ -41,12 +43,12 @@ public class Matrix<T> {
 
     public Matrix() {
         initialRowLength = null;
-        this.rows = new ArrayList<List<T>>();
+        this.rows = new ArrayList<>();
     }
 
-    public Matrix(int rows, int colunms) {
-        initialRowLength = colunms;
-        this.rows = new ArrayList<List<T>>(rows);
+    public Matrix(int rows, int columns) {
+        initialRowLength = columns;
+        this.rows = new ArrayList<>(rows);
     }
 
     public T get(int rowInd, int columnInd) {
@@ -80,9 +82,9 @@ public class Matrix<T> {
     }
 
     public <U> Matrix<U> map(Function<T, U> function) {
-        Matrix<U> result = new Matrix<U>(getRows(), 0);
+        Matrix<U> result = new Matrix<>(getRows(), 0);
         for (List<T> tRow : rows) {
-            List<U> uRow = new ArrayList<U>();
+            List<U> uRow = new ArrayList<>();
             for (T item : tRow) {
                 U uItem = item == null ? null : function.apply(item);
                 uRow.add(uItem);
@@ -92,10 +94,10 @@ public class Matrix<T> {
         return result;
     }
 
-    public void apply(Method<T> method) {
+    public void apply(Consumer<T> consumer) {
         for (List<T> tRow : rows) {
             for (T item : tRow) {
-                method.apply(item);
+                consumer.accept(item);
             }
         }
     }

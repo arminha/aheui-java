@@ -77,11 +77,11 @@ public enum Storage {
 
     private final StorageType type;
 
-    private Storage() {
+    Storage() {
         this(StorageType.Stack);
     }
 
-    private Storage(StorageType type) {
+    Storage(StorageType type) {
         this.type = type;
     }
 

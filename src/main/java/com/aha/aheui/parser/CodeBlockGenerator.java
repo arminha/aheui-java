@@ -36,7 +36,7 @@ class CodeBlockGenerator {
     private class CodeBlockVisitor extends AbstractVisitor<CodeBlock> {
 
         // fields of the visitor
-        private Matrix<Instruction> instructions;
+        private final Matrix<Instruction> instructions;
         private Program program;
         private Instruction previousInstruction;
 
@@ -128,8 +128,8 @@ class CodeBlockGenerator {
         }
 
         private Instruction getNextInstruction(Instruction instruction, boolean mirror) {
-            int columnDiff = 0;
-            int lineDiff = 0;
+            int columnDiff;
+            int lineDiff;
             if (instruction.getDirectionModifier().isFixed()) {
                 lineDiff = instruction.getDirectionModifier().getLineDiff();
                 columnDiff = instruction.getDirectionModifier().getColumnDiff();

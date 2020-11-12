@@ -41,9 +41,9 @@ public class AheuiInterpreter {
     private boolean alternateNext;
 
     protected void init() {
-        storages = new ArrayList<Deque<Integer>>(Storage.values().length - 1);
+        storages = new ArrayList<>(Storage.values().length - 1);
         for (int i = 0; i < Storage.values().length - 1; i++) {
-            storages.add(new ArrayDeque<Integer>());
+            storages.add(new ArrayDeque<>());
         }
         currentStorage = Storage.DefaultStack;
         try {
@@ -197,7 +197,7 @@ public class AheuiInterpreter {
         @Override
         public Boolean visitReadCharacter(Instruction instruction) {
             char c = input.readCharacter();
-            setValue((int) c);
+            setValue(c);
             return true;
         }
 

@@ -63,9 +63,9 @@ public enum InitialJamo implements Jamo {
     Hieut('ㅎ');
     //CHECKSTYLE END IGNORE JavadocStyle
 
-    private char character;
+    private final char character;
 
-    private InitialJamo(char character) {
+    InitialJamo(char character) {
         this.character = character;
     }
 

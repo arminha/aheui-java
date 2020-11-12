@@ -34,14 +34,14 @@ public enum DirectionModifier {
     private final int lineDiff;
     private final int columnDiff;
 
-    private DirectionModifier(int lineDiff, int columnDiff) {
+    DirectionModifier(int lineDiff, int columnDiff) {
         isFixed = true;
         assert lineDiff == 0 || columnDiff == 0;
         this.lineDiff = lineDiff;
         this.columnDiff = columnDiff;
     }
 
-    private DirectionModifier() {
+    DirectionModifier() {
         isFixed = false;
         lineDiff = 0;
         columnDiff = 0;

@@ -62,11 +62,11 @@ public enum Operation {
 
     private final boolean hasParameters;
 
-    private Operation() {
+    Operation() {
         this(false);
     }
 
-    private Operation(boolean hasParameters) {
+    Operation(boolean hasParameters) {
         this.hasParameters = hasParameters;
     }
 

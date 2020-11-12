@@ -81,13 +81,13 @@ public enum FinalJamo implements Jamo {
     Hieut('ㅎ');
     //CHECKSTYLE END IGNORE JavadocStyle
 
-    private char character;
+    private final char character;
 
-    private FinalJamo() {
+    FinalJamo() {
         this.character = '\0';
     }
 
-    private FinalJamo(char character) {
+    FinalJamo(char character) {
         this.character = character;
     }
 

@@ -67,9 +67,9 @@ public enum MedialJamo implements Jamo {
     I('ㅣ');
     //CHECKSTYLE END IGNORE JavadocStyle
 
-    private char character;
+    private final char character;
 
-    private MedialJamo(char character) {
+    MedialJamo(char character) {
         this.character = character;
     }
 
